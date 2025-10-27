@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 8 Chuẩn hóa theo chiều dọc | A Minimal Bookdown Book</title>
+  <meta name="description" content="Everything you need (and nothing more) to start a bookdown book." />
+  <meta name="generator" content="bookdown 0.45 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 8 Chuẩn hóa theo chiều dọc | A Minimal Bookdown Book" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Everything you need (and nothing more) to start a bookdown book." />
+  <meta name="github-repo" content="seankross/bookdown-start" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 8 Chuẩn hóa theo chiều dọc | A Minimal Bookdown Book" />
+  
+  <meta name="twitter:description" content="Everything you need (and nothing more) to start a bookdown book." />
+  
+
+<meta name="author" content="Sean Kross" />
+
+
+<meta name="date" content="2025-10-27" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="cách-thức-chuẩn-hóa.html"/>
+<link rel="next" href="chuẩn-hóa-theo-chiều-ngang.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Bookdown Book</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="diving-in.html"><a href="diving-in.html"><i class="fa fa-check"></i><b>2</b> Diving In</a></li>
+<li class="chapter" data-level="3" data-path="technical-details.html"><a href="technical-details.html"><i class="fa fa-check"></i><b>3</b> Technical Details</a></li>
+<li class="chapter" data-level="4" data-path="nguyên-tắc-chuẩn-hóa-dữ-liệu-tidying-data.html"><a href="nguyên-tắc-chuẩn-hóa-dữ-liệu-tidying-data.html"><i class="fa fa-check"></i><b>4</b> Nguyên tắc chuẩn hóa dữ liệu (Tidying data)</a></li>
+<li class="chapter" data-level="5" data-path="tại-sao-phải-chuẩn-hóa-dữ-liệu.html"><a href="tại-sao-phải-chuẩn-hóa-dữ-liệu.html"><i class="fa fa-check"></i><b>5</b> Tại sao phải chuẩn hóa dữ liệu?</a></li>
+<li class="chapter" data-level="6" data-path="các-vấn-đề-thường-gặp.html"><a href="các-vấn-đề-thường-gặp.html"><i class="fa fa-check"></i><b>6</b> Các vấn đề thường gặp</a></li>
+<li class="chapter" data-level="7" data-path="cách-thức-chuẩn-hóa.html"><a href="cách-thức-chuẩn-hóa.html"><i class="fa fa-check"></i><b>7</b> Cách thức chuẩn hóa</a></li>
+<li class="chapter" data-level="8" data-path="chuẩn-hóa-theo-chiều-dọc.html"><a href="chuẩn-hóa-theo-chiều-dọc.html"><i class="fa fa-check"></i><b>8</b> Chuẩn hóa theo chiều dọc</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="chuẩn-hóa-theo-chiều-dọc.html"><a href="chuẩn-hóa-theo-chiều-dọc.html#dữ-liệu-trong-tên-cột"><i class="fa fa-check"></i><b>8.1</b> Dữ liệu trong tên cột</a></li>
+<li class="chapter" data-level="8.2" data-path="chuẩn-hóa-theo-chiều-dọc.html"><a href="chuẩn-hóa-theo-chiều-dọc.html#cách-hoạt-động"><i class="fa fa-check"></i><b>8.2</b> Cách hoạt động</a></li>
+<li class="chapter" data-level="8.3" data-path="chuẩn-hóa-theo-chiều-dọc.html"><a href="chuẩn-hóa-theo-chiều-dọc.html#nhiều-biến-được-lưu-trong-một-cột"><i class="fa fa-check"></i><b>8.3</b> Nhiều biến được lưu trong một cột</a></li>
+<li class="chapter" data-level="8.4" data-path="chuẩn-hóa-theo-chiều-dọc.html"><a href="chuẩn-hóa-theo-chiều-dọc.html#dữ-liệu-và-biến-nằm-trong-tên-cột"><i class="fa fa-check"></i><b>8.4</b> Dữ liệu và biến nằm trong tên cột</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="chuẩn-hóa-theo-chiều-ngang.html"><a href="chuẩn-hóa-theo-chiều-ngang.html"><i class="fa fa-check"></i><b>9</b> Chuẩn hóa theo chiều ngang</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="chuẩn-hóa-theo-chiều-ngang.html"><a href="chuẩn-hóa-theo-chiều-ngang.html#cách-hoạt-động-1"><i class="fa fa-check"></i><b>9.1</b> Cách hoạt động</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A Minimal Bookdown Book</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="chuẩn-hóa-theo-chiều-dọc" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">Chapter 8</span> Chuẩn hóa theo chiều dọc<a href="chuẩn-hóa-theo-chiều-dọc.html#chuẩn-hóa-theo-chiều-dọc" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="dữ-liệu-trong-tên-cột" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Dữ liệu trong tên cột<a href="chuẩn-hóa-theo-chiều-dọc.html#dữ-liệu-trong-tên-cột" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb12-1" tabindex="-1"></a>billboard</span></code></pre></div>
+<pre><code>## # A tibble: 317 × 79
+##   artist     track date.entered   wk1   wk2   wk3   wk4   wk5   wk6   wk7   wk8   wk9
+##   &lt;chr&gt;      &lt;chr&gt; &lt;date&gt;       &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1 2 Pac      Baby… 2000-02-26      87    82    72    77    87    94    99    NA    NA
+## 2 2Ge+her    The … 2000-09-02      91    87    92    NA    NA    NA    NA    NA    NA
+## 3 3 Doors D… Kryp… 2000-04-08      81    70    68    67    66    57    54    53    51
+## 4 3 Doors D… Loser 2000-10-21      76    76    72    69    67    65    55    59    62
+## 5 504 Boyz   Wobb… 2000-04-15      57    34    25    17    17    31    36    49    53
+## # ℹ 312 more rows
+## # ℹ 67 more variables: wk10 &lt;dbl&gt;, wk11 &lt;dbl&gt;, wk12 &lt;dbl&gt;, wk13 &lt;dbl&gt;, wk14 &lt;dbl&gt;,
+## #   wk15 &lt;dbl&gt;, wk16 &lt;dbl&gt;, wk17 &lt;dbl&gt;, wk18 &lt;dbl&gt;, wk19 &lt;dbl&gt;, wk20 &lt;dbl&gt;,
+## #   wk21 &lt;dbl&gt;, wk22 &lt;dbl&gt;, wk23 &lt;dbl&gt;, wk24 &lt;dbl&gt;, wk25 &lt;dbl&gt;, wk26 &lt;dbl&gt;,
+## #   wk27 &lt;dbl&gt;, wk28 &lt;dbl&gt;, wk29 &lt;dbl&gt;, wk30 &lt;dbl&gt;, wk31 &lt;dbl&gt;, wk32 &lt;dbl&gt;,
+## #   wk33 &lt;dbl&gt;, wk34 &lt;dbl&gt;, wk35 &lt;dbl&gt;, wk36 &lt;dbl&gt;, wk37 &lt;dbl&gt;, wk38 &lt;dbl&gt;,
+## #   wk39 &lt;dbl&gt;, wk40 &lt;dbl&gt;, wk41 &lt;dbl&gt;, wk42 &lt;dbl&gt;, wk43 &lt;dbl&gt;, wk44 &lt;dbl&gt;, …</code></pre>
+<p>Trong dataset:</p>
+<ul>
+<li><p>: tên nghệ sĩ, ban nhạc.</p></li>
+<li><p>: tên bài hát.</p></li>
+<li><p>: ngày bài hát bắt đầu lọt vào bảng xếp hạng Billboard.</p></li>
+<li><p>: Thứ hạng của bài hát theo từng tuần.</p></li>
+</ul>
+<p>Ở đây, các cột tên là biến tuần trong khi ô giá trị lại là thứ hạng. Để chuẩn hóa dữ liệu này ta sử dụng .</p>
+<p>Các tham số trong \texttt{pivot_longer():</p>
+<ul>
+<li><p>: Data frame cần pivot.</p></li>
+<li><p>: (tidy-select) Các cột cần chuyển về dạng dài.</p></li>
+<li><p>: Cách sắp xếp các dòng sau pivot.</p></li>
+<li><p>: Tên cột (hoặc nhiều cột) mới sinh ra từ tên cột ban đầu.</p>
+<ul>
+<li><p>Nếu độ dài = 0 hoặc : không tạo thêm cột.</p></li>
+<li><p>Nếu độ dài = 1: tạo một cột chứa tên cột gốc.</p></li>
+<li><p>Nếu độ dài &gt; 1: phải dùng thêm hoặc để tách tên cột.</p></li>
+<li><p>Đặc biệt:</p>
+<ul>
+<li><p> = bỏ qua thành phần đó trong tên cột.</p></li>
+<li><p> = phần đó của tên cột sẽ trở thành tên biến mới (ghi đè ).</p></li>
+</ul></li>
+</ul></li>
+<li><p>: Regex để bỏ tiền tố trong tên cột.</p></li>
+<li><p>: vị trí hoặc regex để tách tên cột.</p></li>
+<li><p>: regex có nhóm để trích thành phần.</p></li>
+<li><p>, : Khai báo trước kiểu dữ liệu mong muốn.</p></li>
+<li><p>, : Hàm để chuyển đổi kiểu dữ liệu sau khi pivot.</p></li>
+<li><p>: Xử lý tên cột trùng lặp</p></li>
+<li><p>: Tên cột mới chứa giá trị từ các ô dữ liệu. (Bị bỏ qua nếu dùng ).</p></li>
+<li><p>: Nếu , bỏ dòng có (chỉ giữ quan sát thực).</p></li>
+</ul>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb14-1" tabindex="-1"></a>billboard <span class="sc">|&gt;</span> </span>
+<span id="cb14-2"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb14-2" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb14-3"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb14-3" tabindex="-1"></a>    <span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="st">&quot;wk&quot;</span>), </span>
+<span id="cb14-4"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb14-4" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="st">&quot;week&quot;</span>, </span>
+<span id="cb14-5"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb14-5" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">&quot;rank&quot;</span></span>
+<span id="cb14-6"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb14-6" tabindex="-1"></a>  )</span></code></pre></div>
+<pre><code>## # A tibble: 24,092 × 5
+##   artist track                   date.entered week   rank
+##   &lt;chr&gt;  &lt;chr&gt;                   &lt;date&gt;       &lt;chr&gt; &lt;dbl&gt;
+## 1 2 Pac  Baby Don&#39;t Cry (Keep... 2000-02-26   wk1      87
+## 2 2 Pac  Baby Don&#39;t Cry (Keep... 2000-02-26   wk2      82
+## 3 2 Pac  Baby Don&#39;t Cry (Keep... 2000-02-26   wk3      72
+## 4 2 Pac  Baby Don&#39;t Cry (Keep... 2000-02-26   wk4      77
+## 5 2 Pac  Baby Don&#39;t Cry (Keep... 2000-02-26   wk5      87
+## # ℹ 24,087 more rows</code></pre>
+<p>Sau dữ liệu, có ba đối số chính:</p>
+<ul>
+<li><p> chỉ định những cột cần được pivot, tức là những cột không phải biến. Đối số này dùng cú pháp giống , nên ở đây ta có thể dùng hoặc .</p></li>
+<li><p> đặt tên cho biến được lưu trong tên cột, ở đây ta đặt tên biến đó là .</p></li>
+<li><p> đặt tên cho biến được lưu trong các giá trị ô, ở đây ta đặt tên biến đó là .</p></li>
+</ul>
+<p>Lưu ý rằng trong code, và được để trong dấu nháy kép vì đó là các biến mới ta tạo ra, chúng chưa tồn tại trong dữ liệu khi ta gọi .</p>
+<p>Bây giờ ta hãy chú ý đến data frame sau khi được làm dài. Điều gì xảy ra nếu một bài hát nằm trong top 100 ít hơn 76 tuần? Ví dụ, bài của 2 Pac “Baby Don’t Cry”. Kết quả ở trên cho thấy nó chỉ nằm trong top 100 trong 7 tuần, và tất cả các tuần còn lại được điền bằng giá trị thiếu (). Những giá trị này thật ra không đại diện cho quan sát bị thiếu, mà là do cấu trúc của bắt buộc phải có. Vì vậy, ta có thể yêu cầu loại bỏ chúng bằng cách đặt .</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb16-1" tabindex="-1"></a>billboard <span class="sc">|&gt;</span> </span>
+<span id="cb16-2"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb16-2" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb16-3"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb16-3" tabindex="-1"></a>    <span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="st">&quot;wk&quot;</span>), </span>
+<span id="cb16-4"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb16-4" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="st">&quot;week&quot;</span>, </span>
+<span id="cb16-5"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb16-5" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">&quot;rank&quot;</span>,</span>
+<span id="cb16-6"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb16-6" tabindex="-1"></a>    <span class="at">values_drop_na =</span> <span class="cn">TRUE</span></span>
+<span id="cb16-7"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb16-7" tabindex="-1"></a>  )</span></code></pre></div>
+<pre><code>## # A tibble: 5,307 × 5
+##   artist track                   date.entered week   rank
+##   &lt;chr&gt;  &lt;chr&gt;                   &lt;date&gt;       &lt;chr&gt; &lt;dbl&gt;
+## 1 2 Pac  Baby Don&#39;t Cry (Keep... 2000-02-26   wk1      87
+## 2 2 Pac  Baby Don&#39;t Cry (Keep... 2000-02-26   wk2      82
+## 3 2 Pac  Baby Don&#39;t Cry (Keep... 2000-02-26   wk3      72
+## 4 2 Pac  Baby Don&#39;t Cry (Keep... 2000-02-26   wk4      77
+## 5 2 Pac  Baby Don&#39;t Cry (Keep... 2000-02-26   wk5      87
+## # ℹ 5,302 more rows</code></pre>
+<p>Số lượng hàng bây giờ ít hơn nhiều, cho thấy rằng nhiều hàng chứa đã bị loại bỏ.</p>
+<p>Bạn cũng có thể thắc mắc: điều gì xảy ra nếu một bài hát nằm trong top 100 hơn 76 tuần? Với dữ liệu này ta không thể biết được, nhưng có thể đoán rằng các cột bổ sung như , , … sẽ được thêm vào dataset.</p>
+<p>Dữ liệu hiện tại đã ở dạng tidy, nhưng ta có thể làm cho việc tính toán sau này dễ dàng hơn bằng cách chuyển đổi giá trị của từ chuỗi ký tự thành số, sử dụng và . Hàm rất tiện lợi vì nó sẽ trích xuất số đầu tiên trong một chuỗi, và bỏ qua toàn bộ phần ký tự khác</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb18-1" tabindex="-1"></a>billboard_longer <span class="ot">&lt;-</span> billboard <span class="sc">|&gt;</span> </span>
+<span id="cb18-2"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb18-2" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb18-3"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb18-3" tabindex="-1"></a>    <span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="st">&quot;wk&quot;</span>), </span>
+<span id="cb18-4"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb18-4" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="st">&quot;week&quot;</span>, </span>
+<span id="cb18-5"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb18-5" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">&quot;rank&quot;</span>,</span>
+<span id="cb18-6"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb18-6" tabindex="-1"></a>    <span class="at">values_drop_na =</span> <span class="cn">TRUE</span></span>
+<span id="cb18-7"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb18-7" tabindex="-1"></a>  ) <span class="sc">|&gt;</span> </span>
+<span id="cb18-8"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb18-8" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb18-9"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb18-9" tabindex="-1"></a>    <span class="at">week =</span> <span class="fu">parse_number</span>(week)</span>
+<span id="cb18-10"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb18-10" tabindex="-1"></a>  )</span>
+<span id="cb18-11"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb18-11" tabindex="-1"></a>billboard_longer</span></code></pre></div>
+<pre><code>## # A tibble: 5,307 × 5
+##   artist track                   date.entered  week  rank
+##   &lt;chr&gt;  &lt;chr&gt;                   &lt;date&gt;       &lt;dbl&gt; &lt;dbl&gt;
+## 1 2 Pac  Baby Don&#39;t Cry (Keep... 2000-02-26       1    87
+## 2 2 Pac  Baby Don&#39;t Cry (Keep... 2000-02-26       2    82
+## 3 2 Pac  Baby Don&#39;t Cry (Keep... 2000-02-26       3    72
+## 4 2 Pac  Baby Don&#39;t Cry (Keep... 2000-02-26       4    77
+## 5 2 Pac  Baby Don&#39;t Cry (Keep... 2000-02-26       5    87
+## # ℹ 5,302 more rows</code></pre>
+<p>Bây giờ khi đã có tất cả số tuần trong một biến và tất cả giá trị thứ hạng trong một biến khác, ta ở vị trí thuận lợi để trực quan hóa cách thứ hạng của bài hát thay đổi theo thời gian.</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb20-1" tabindex="-1"></a>billboard_longer <span class="sc">|&gt;</span> </span>
+<span id="cb20-2"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb20-2" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> week, <span class="at">y =</span> rank, <span class="at">group =</span> track)) <span class="sc">+</span> </span>
+<span id="cb20-3"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb20-3" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">alpha =</span> <span class="fl">0.25</span>) <span class="sc">+</span> </span>
+<span id="cb20-4"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb20-4" tabindex="-1"></a>  <span class="fu">scale_y_reverse</span>()</span></code></pre></div>
+<p><img src="04-Data_tidying_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>Ta có thể thấy rằng rất ít bài hát duy trì trong top 100 quá 20 tuần. Với dữ liệu đã được chuẩn hóa ta có thể tạo được Thống kê theo nghệ sĩ (số bài hát, số tuần trụ BXH, rank trung bình)</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb21-1" tabindex="-1"></a>billboard_longer <span class="sc">%&gt;%</span></span>
+<span id="cb21-2"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb21-2" tabindex="-1"></a>  <span class="fu">group_by</span>(artist) <span class="sc">%&gt;%</span></span>
+<span id="cb21-3"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb21-3" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb21-4"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb21-4" tabindex="-1"></a>    <span class="at">n_songs =</span> <span class="fu">n_distinct</span>(track),</span>
+<span id="cb21-5"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb21-5" tabindex="-1"></a>    <span class="at">total_weeks =</span> <span class="fu">n_distinct</span>(<span class="fu">paste</span>(track, week)),</span>
+<span id="cb21-6"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb21-6" tabindex="-1"></a>    <span class="at">avg_rank =</span> <span class="fu">mean</span>(rank, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb21-7"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb21-7" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb21-8"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb21-8" tabindex="-1"></a>  <span class="fu">arrange</span>(avg_rank)</span></code></pre></div>
+<pre><code>## # A tibble: 228 × 4
+##   artist                           n_songs total_weeks avg_rank
+##   &lt;chr&gt;                              &lt;int&gt;       &lt;int&gt;    &lt;dbl&gt;
+## 1 &quot;Santana&quot;                              1          26  10.5   
+## 2 &quot;Elliott, Missy \&quot;Misdemeanor\&quot;&quot;       1          21  14.3333
+## 3 &quot;matchbox twenty&quot;                      1          39  18.6410
+## 4 &quot;N&#39;Sync&quot;                               3          74  18.6486
+## 5 &quot;Janet&quot;                                1          24  19.4167
+## # ℹ 223 more rows</code></pre>
+</div>
+<div id="cách-hoạt-động" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> Cách hoạt động<a href="chuẩn-hóa-theo-chiều-dọc.html#cách-hoạt-động" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb23-1" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
+<span id="cb23-2"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb23-2" tabindex="-1"></a>  <span class="sc">~</span>id,  <span class="sc">~</span>bp1, <span class="sc">~</span>bp2,</span>
+<span id="cb23-3"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb23-3" tabindex="-1"></a>   <span class="st">&quot;A&quot;</span>,  <span class="dv">100</span>,  <span class="dv">120</span>,</span>
+<span id="cb23-4"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb23-4" tabindex="-1"></a>   <span class="st">&quot;B&quot;</span>,  <span class="dv">140</span>,  <span class="dv">115</span>,</span>
+<span id="cb23-5"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb23-5" tabindex="-1"></a>   <span class="st">&quot;C&quot;</span>,  <span class="dv">120</span>,  <span class="dv">125</span></span>
+<span id="cb23-6"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb23-6" tabindex="-1"></a>)</span></code></pre></div>
+<p>Chúng ta muốn bộ dữ liệu mới có ba biến: (đã tồn tại), (tên các cột) và (giá trị trong các ô). Để làm được điều này, chúng ta cần sử dụng trên :</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb24-1" tabindex="-1"></a>df <span class="sc">|&gt;</span> </span>
+<span id="cb24-2"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb24-2" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb24-3"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb24-3" tabindex="-1"></a>    <span class="at">cols =</span> bp1<span class="sc">:</span>bp2,</span>
+<span id="cb24-4"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb24-4" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="st">&quot;measurement&quot;</span>,</span>
+<span id="cb24-5"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb24-5" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">&quot;value&quot;</span></span>
+<span id="cb24-6"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb24-6" tabindex="-1"></a>  )</span></code></pre></div>
+<pre><code>## # A tibble: 6 × 3
+##   id    measurement value
+##   &lt;chr&gt; &lt;chr&gt;       &lt;dbl&gt;
+## 1 A     bp1           100
+## 2 A     bp2           120
+## 3 B     bp1           140
+## 4 B     bp2           115
+## 5 C     bp1           120
+## # ℹ 1 more row</code></pre>
+<p><img src="images/variables.png" width="724" />
+<img src="images/column-names.png" width="724" />
+<img src="images/cell-values.png" width="724" /></p>
+</div>
+<div id="nhiều-biến-được-lưu-trong-một-cột" class="section level2 hasAnchor" number="8.3">
+<h2><span class="header-section-number">8.3</span> Nhiều biến được lưu trong một cột<a href="chuẩn-hóa-theo-chiều-dọc.html#nhiều-biến-được-lưu-trong-một-cột" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb26-1" tabindex="-1"></a>who2</span></code></pre></div>
+<pre><code>## # A tibble: 7,240 × 58
+##   country     year sp_m_014 sp_m_1524 sp_m_2534 sp_m_3544 sp_m_4554 sp_m_5564 sp_m_65
+##   &lt;chr&gt;      &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
+## 1 Afghanist…  1980       NA        NA        NA        NA        NA        NA      NA
+## 2 Afghanist…  1981       NA        NA        NA        NA        NA        NA      NA
+## 3 Afghanist…  1982       NA        NA        NA        NA        NA        NA      NA
+## 4 Afghanist…  1983       NA        NA        NA        NA        NA        NA      NA
+## 5 Afghanist…  1984       NA        NA        NA        NA        NA        NA      NA
+## # ℹ 7,235 more rows
+## # ℹ 49 more variables: sp_f_014 &lt;dbl&gt;, sp_f_1524 &lt;dbl&gt;, sp_f_2534 &lt;dbl&gt;,
+## #   sp_f_3544 &lt;dbl&gt;, sp_f_4554 &lt;dbl&gt;, sp_f_5564 &lt;dbl&gt;, sp_f_65 &lt;dbl&gt;,
+## #   sn_m_014 &lt;dbl&gt;, sn_m_1524 &lt;dbl&gt;, sn_m_2534 &lt;dbl&gt;, sn_m_3544 &lt;dbl&gt;,
+## #   sn_m_4554 &lt;dbl&gt;, sn_m_5564 &lt;dbl&gt;, sn_m_65 &lt;dbl&gt;, sn_f_014 &lt;dbl&gt;,
+## #   sn_f_1524 &lt;dbl&gt;, sn_f_2534 &lt;dbl&gt;, sn_f_3544 &lt;dbl&gt;, sn_f_4554 &lt;dbl&gt;,
+## #   sn_f_5564 &lt;dbl&gt;, sn_f_65 &lt;dbl&gt;, ep_m_014 &lt;dbl&gt;, ep_m_1524 &lt;dbl&gt;, …</code></pre>
+<p>Dataset này, được thu thập bởi Tổ chức Y tế Thế giới (WHO), ghi lại thông tin về chẩn đoán bệnh lao (tuberculosis). Có hai cột vốn đã là biến và dễ diễn giải: và . Tiếp theo đó là 56 cột như , , và . Nếu bạn quan sát các tên cột này đủ lâu, bạn sẽ nhận ra một mẫu chung. Mỗi tên cột được tạo bởi ba phần, được phân tách bằng dấu gạch dưới _ :</p>
+<p>Phần thứ nhất: //, mô tả phương pháp chẩn đoán được sử dụng.</p>
+<p>Phần thứ hai: /, chỉ giới tính (mã hóa nhị phân trong dataset này).</p>
+<p>Phần thứ ba: //////, biểu thị nhóm tuổi (ví dụ = 0–14 tuổi).</p>
+<p>Như vậy, trong trường hợp này ta có sáu phần thông tin được ghi trong :</p>
+<ul>
+<li><p>quốc gia</p></li>
+<li><p>năm</p></li>
+<li><p>phương pháp chẩn đoán</p></li>
+<li><p>giới tính</p></li>
+<li><p>nhóm tuổi</p></li>
+<li><p>số lượng bệnh nhân trong nhóm.</p></li>
+</ul>
+<p>Để sắp xếp 6 thông tin này vào 6 cột riêng biệt, ta sử dụng với:</p>
+<p>một vector cột cho , hướng dẫn tách tên biến gốc thành nhiều phần qua ,và một tên cột cho .</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb28-1" tabindex="-1"></a>who2 <span class="sc">|&gt;</span> </span>
+<span id="cb28-2"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb28-2" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb28-3"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb28-3" tabindex="-1"></a>    <span class="at">cols =</span> <span class="sc">!</span>(country<span class="sc">:</span>year),</span>
+<span id="cb28-4"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb28-4" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="fu">c</span>(<span class="st">&quot;diagnosis&quot;</span>, <span class="st">&quot;gender&quot;</span>, <span class="st">&quot;age&quot;</span>), </span>
+<span id="cb28-5"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb28-5" tabindex="-1"></a>    <span class="at">names_sep =</span> <span class="st">&quot;_&quot;</span>,</span>
+<span id="cb28-6"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb28-6" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">&quot;count&quot;</span></span>
+<span id="cb28-7"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb28-7" tabindex="-1"></a>  )</span></code></pre></div>
+<pre><code>## # A tibble: 405,440 × 6
+##   country      year diagnosis gender age   count
+##   &lt;chr&gt;       &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;  &lt;chr&gt; &lt;dbl&gt;
+## 1 Afghanistan  1980 sp        m      014      NA
+## 2 Afghanistan  1980 sp        m      1524     NA
+## 3 Afghanistan  1980 sp        m      2534     NA
+## 4 Afghanistan  1980 sp        m      3544     NA
+## 5 Afghanistan  1980 sp        m      4554     NA
+## # ℹ 405,435 more rows</code></pre>
+<p>Một các khác có thể được sử dụng là sử dụng tham số kết hợp việc sử dụng kĩ thuật phân tích chuỗi để trích xuất thông tin từ biến.</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb30-1" tabindex="-1"></a>who2 <span class="sc">|&gt;</span> </span>
+<span id="cb30-2"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb30-2" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb30-3"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb30-3" tabindex="-1"></a>    <span class="at">cols =</span> <span class="sc">!</span>(country<span class="sc">:</span>year), </span>
+<span id="cb30-4"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb30-4" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="fu">c</span>(<span class="st">&quot;diagnosis&quot;</span>, <span class="st">&quot;gender&quot;</span>, <span class="st">&quot;age&quot;</span>), </span>
+<span id="cb30-5"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb30-5" tabindex="-1"></a>    <span class="at">names_pattern =</span> <span class="st">&quot;([a-z]+)_([mf])_(.*)&quot;</span>, </span>
+<span id="cb30-6"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb30-6" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">&quot;count&quot;</span></span>
+<span id="cb30-7"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb30-7" tabindex="-1"></a>  )</span></code></pre></div>
+<pre><code>## # A tibble: 405,440 × 6
+##   country      year diagnosis gender age   count
+##   &lt;chr&gt;       &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;  &lt;chr&gt; &lt;dbl&gt;
+## 1 Afghanistan  1980 sp        m      014      NA
+## 2 Afghanistan  1980 sp        m      1524     NA
+## 3 Afghanistan  1980 sp        m      2534     NA
+## 4 Afghanistan  1980 sp        m      3544     NA
+## 5 Afghanistan  1980 sp        m      4554     NA
+## # ℹ 405,435 more rows</code></pre>
+</div>
+<div id="dữ-liệu-và-biến-nằm-trong-tên-cột" class="section level2 hasAnchor" number="8.4">
+<h2><span class="header-section-number">8.4</span> Dữ liệu và biến nằm trong tên cột<a href="chuẩn-hóa-theo-chiều-dọc.html#dữ-liệu-và-biến-nằm-trong-tên-cột" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb32-1" tabindex="-1"></a>household</span></code></pre></div>
+<pre><code>## # A tibble: 5 × 5
+##   family dob_child1 dob_child2 name_child1 name_child2
+##    &lt;int&gt; &lt;date&gt;     &lt;date&gt;     &lt;chr&gt;       &lt;chr&gt;      
+## 1      1 1998-11-26 2000-01-29 Susan       Jose       
+## 2      2 1996-06-22 NA         Mark        &lt;NA&gt;       
+## 3      3 2002-07-11 2004-04-05 Sam         Seth       
+## 4      4 2004-10-10 2009-08-27 Craig       Khai       
+## 5      5 2000-12-05 2005-02-28 Parker      Gracie</code></pre>
+<p>Bộ dữ liệu này chứa thông tin về năm gia đình, với tên và ngày sinh của tối đa hai đứa trẻ. Thách thức mới trong bộ dữ liệu này là tên cột lại chứa tên của hai biến (, ) và giá trị của một biến khác (, với giá trị 1 hoặc 2).</p>
+<p>Để giải quyết vấn đề này, ta cần truyền một vector vào đối số , nhưng lần này ta dùng sentinel đặc biệt ; đây không phải là tên của một biến mà là một giá trị đặc biệt cho để thực hiện một hành động khác. Cụ thể, nó sẽ ghi đè đối số thông thường và sử dụng thành phần đầu tiên của tên cột sau khi pivot làm tên biến trong bảng kết quả.</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb34-1" tabindex="-1"></a>household <span class="sc">|&gt;</span> </span>
+<span id="cb34-2"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb34-2" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb34-3"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb34-3" tabindex="-1"></a>    <span class="at">cols =</span> <span class="sc">!</span>family, </span>
+<span id="cb34-4"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb34-4" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="fu">c</span>(<span class="st">&quot;.value&quot;</span>, <span class="st">&quot;child&quot;</span>), </span>
+<span id="cb34-5"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb34-5" tabindex="-1"></a>    <span class="at">names_sep =</span> <span class="st">&quot;_&quot;</span>, </span>
+<span id="cb34-6"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb34-6" tabindex="-1"></a>    <span class="at">values_drop_na =</span> <span class="cn">TRUE</span></span>
+<span id="cb34-7"><a href="chuẩn-hóa-theo-chiều-dọc.html#cb34-7" tabindex="-1"></a>  )</span></code></pre></div>
+<pre><code>## # A tibble: 9 × 4
+##   family child  dob        name 
+##    &lt;int&gt; &lt;chr&gt;  &lt;date&gt;     &lt;chr&gt;
+## 1      1 child1 1998-11-26 Susan
+## 2      1 child2 2000-01-29 Jose 
+## 3      2 child1 1996-06-22 Mark 
+## 4      3 child1 2002-07-11 Sam  
+## 5      3 child2 2004-04-05 Seth 
+## # ℹ 4 more rows</code></pre>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="cách-thức-chuẩn-hóa.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="chuẩn-hóa-theo-chiều-ngang.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>

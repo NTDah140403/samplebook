@@ -1,0 +1,7 @@
+book_filename: "bookdown-start"
+chapter_name: "Chapter "
+repo: https://github.com/seankross/bookdown-start
+output_dir: docs
+rmd_files: ["index.Rmd", "01-Introduction.Rmd", "02-Diving-In.Rmd","03-Work-In-Progress.Rmd", "04-Data_tidying.Rmd" ]
+clean: [packages.bib, bookdown.bbl]
+new_session: yes

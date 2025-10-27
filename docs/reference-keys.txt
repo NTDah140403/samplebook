@@ -1,0 +1,15 @@
+introduction
+diving-in
+technical-details
+tidying-data
+nguyên-tắc-chuẩn-hóa-dữ-liệu-tidying-data
+tại-sao-phải-chuẩn-hóa-dữ-liệu
+các-vấn-đề-thường-gặp
+cách-thức-chuẩn-hóa
+chuẩn-hóa-theo-chiều-dọc
+dữ-liệu-trong-tên-cột
+cách-hoạt-động
+nhiều-biến-được-lưu-trong-một-cột
+dữ-liệu-và-biến-nằm-trong-tên-cột
+chuẩn-hóa-theo-chiều-ngang
+cách-hoạt-động-1

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 9 Chuẩn hóa theo chiều ngang | A Minimal Bookdown Book</title>
+  <meta name="description" content="Everything you need (and nothing more) to start a bookdown book." />
+  <meta name="generator" content="bookdown 0.45 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 9 Chuẩn hóa theo chiều ngang | A Minimal Bookdown Book" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Everything you need (and nothing more) to start a bookdown book." />
+  <meta name="github-repo" content="seankross/bookdown-start" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 9 Chuẩn hóa theo chiều ngang | A Minimal Bookdown Book" />
+  
+  <meta name="twitter:description" content="Everything you need (and nothing more) to start a bookdown book." />
+  
+
+<meta name="author" content="Sean Kross" />
+
+
+<meta name="date" content="2025-10-27" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="chuẩn-hóa-theo-chiều-dọc.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Bookdown Book</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="diving-in.html"><a href="diving-in.html"><i class="fa fa-check"></i><b>2</b> Diving In</a></li>
+<li class="chapter" data-level="3" data-path="technical-details.html"><a href="technical-details.html"><i class="fa fa-check"></i><b>3</b> Technical Details</a></li>
+<li class="chapter" data-level="4" data-path="nguyên-tắc-chuẩn-hóa-dữ-liệu-tidying-data.html"><a href="nguyên-tắc-chuẩn-hóa-dữ-liệu-tidying-data.html"><i class="fa fa-check"></i><b>4</b> Nguyên tắc chuẩn hóa dữ liệu (Tidying data)</a></li>
+<li class="chapter" data-level="5" data-path="tại-sao-phải-chuẩn-hóa-dữ-liệu.html"><a href="tại-sao-phải-chuẩn-hóa-dữ-liệu.html"><i class="fa fa-check"></i><b>5</b> Tại sao phải chuẩn hóa dữ liệu?</a></li>
+<li class="chapter" data-level="6" data-path="các-vấn-đề-thường-gặp.html"><a href="các-vấn-đề-thường-gặp.html"><i class="fa fa-check"></i><b>6</b> Các vấn đề thường gặp</a></li>
+<li class="chapter" data-level="7" data-path="cách-thức-chuẩn-hóa.html"><a href="cách-thức-chuẩn-hóa.html"><i class="fa fa-check"></i><b>7</b> Cách thức chuẩn hóa</a></li>
+<li class="chapter" data-level="8" data-path="chuẩn-hóa-theo-chiều-dọc.html"><a href="chuẩn-hóa-theo-chiều-dọc.html"><i class="fa fa-check"></i><b>8</b> Chuẩn hóa theo chiều dọc</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="chuẩn-hóa-theo-chiều-dọc.html"><a href="chuẩn-hóa-theo-chiều-dọc.html#dữ-liệu-trong-tên-cột"><i class="fa fa-check"></i><b>8.1</b> Dữ liệu trong tên cột</a></li>
+<li class="chapter" data-level="8.2" data-path="chuẩn-hóa-theo-chiều-dọc.html"><a href="chuẩn-hóa-theo-chiều-dọc.html#cách-hoạt-động"><i class="fa fa-check"></i><b>8.2</b> Cách hoạt động</a></li>
+<li class="chapter" data-level="8.3" data-path="chuẩn-hóa-theo-chiều-dọc.html"><a href="chuẩn-hóa-theo-chiều-dọc.html#nhiều-biến-được-lưu-trong-một-cột"><i class="fa fa-check"></i><b>8.3</b> Nhiều biến được lưu trong một cột</a></li>
+<li class="chapter" data-level="8.4" data-path="chuẩn-hóa-theo-chiều-dọc.html"><a href="chuẩn-hóa-theo-chiều-dọc.html#dữ-liệu-và-biến-nằm-trong-tên-cột"><i class="fa fa-check"></i><b>8.4</b> Dữ liệu và biến nằm trong tên cột</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="chuẩn-hóa-theo-chiều-ngang.html"><a href="chuẩn-hóa-theo-chiều-ngang.html"><i class="fa fa-check"></i><b>9</b> Chuẩn hóa theo chiều ngang</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="chuẩn-hóa-theo-chiều-ngang.html"><a href="chuẩn-hóa-theo-chiều-ngang.html#cách-hoạt-động-1"><i class="fa fa-check"></i><b>9.1</b> Cách hoạt động</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A Minimal Bookdown Book</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="chuẩn-hóa-theo-chiều-ngang" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">Chapter 9</span> Chuẩn hóa theo chiều ngang<a href="chuẩn-hóa-theo-chiều-ngang.html#chuẩn-hóa-theo-chiều-ngang" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Khi muốn mở rộng dữ liệu theo chiều ngang, giảm số dòng tăng số cột, đặc biệt trong trường hợp quan sát bị trải điều trên nhiều dong ta thực hiện chuẩn hóa theo chiều ngang bằng việc sử dụng hàm .</p>
+<p>Các tham số trong :</p>
+<ul>
+<li><p>: bảng dữ liệu cần pivot. : các cột định danh mỗi quan sát (nếu không chỉ định → mặc định lấy tất cả các cột trừ , ).</p></li>
+<li><p>: có mở rộng toàn bộ kết hợp có thể của không (giống ) → tạo thêm nhiều hàng.</p></li>
+<li><p>: cột (hoặc nhiều cột) dùng để tạo tên biến mới.</p></li>
+<li><p>: cột (hoặc nhiều cột) chứa giá trị để đổ vào các ô.</p></li>
+<li><p>: thêm tiền tố vào tên cột mới.</p></li>
+<li><p>: ký tự ghép nếu có nhiều cột.</p></li>
+<li><p>: thay cho và , cho phép tự thiết kế tên bằng cú pháp glue.</p></li>
+<li><p>: sắp xếp tên cột theo thứ tự (mặc định FALSE).</p></li>
+<li><p>: khi nhiều giá trị trong + nhiều , quy định thứ tự ghép cột (“fastest” hoặc “slowest”).</p></li>
+<li><p>: mở rộng tất cả giá trị có thể trong , kể cả giá trị không xuất hiện.</p></li>
+<li><p>: xử lý khi tên cột trùng (mặc định báo lỗi, có thể chọn “minimal”, “unique”…)</p></li>
+<li><p>: điền giá trị thay thế cho (ví dụ: 0).</p></li>
+<li><p>: hàm tổng hợp khi có nhiều giá trị rơi vào cùng một ô (ví dụ: , ).</p></li>
+<li><p>: hàm tổng hợp cho các cột không dùng trong , , .</p></li>
+</ul>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb36-1" tabindex="-1"></a>cms_patient_experience</span></code></pre></div>
+<pre><code>## # A tibble: 500 × 5
+##   org_pac_id org_nm                     measure_cd  measure_title            prf_rate
+##   &lt;chr&gt;      &lt;chr&gt;                      &lt;chr&gt;       &lt;chr&gt;                       &lt;dbl&gt;
+## 1 0446157747 USC CARE MEDICAL GROUP INC CAHPS_GRP_1 CAHPS for MIPS SSM: Get…       63
+## 2 0446157747 USC CARE MEDICAL GROUP INC CAHPS_GRP_2 CAHPS for MIPS SSM: How…       87
+## 3 0446157747 USC CARE MEDICAL GROUP INC CAHPS_GRP_3 CAHPS for MIPS SSM: Pat…       86
+## 4 0446157747 USC CARE MEDICAL GROUP INC CAHPS_GRP_5 CAHPS for MIPS SSM: Hea…       57
+## 5 0446157747 USC CARE MEDICAL GROUP INC CAHPS_GRP_8 CAHPS for MIPS SSM: Cou…       85
+## # ℹ 495 more rows</code></pre>
+<p>Đơn vị cốt lõi được nghiên cứu là tổ chức (), nhưng mỗi tổ chức lại trải rộng thành sáu hàng, với mỗi hàng tương ứng với một phép đo được thực hiện trong khảo sát tổ chức.</p>
+<p>Ta có thể xem toàn bộ tập hợp giá trị của và bằng cách sử dụng hàm .</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb38-1" tabindex="-1"></a>cms_patient_experience <span class="sc">|&gt;</span> </span>
+<span id="cb38-2"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb38-2" tabindex="-1"></a>  <span class="fu">distinct</span>(measure_cd, measure_title)</span></code></pre></div>
+<pre><code>## # A tibble: 6 × 2
+##   measure_cd  measure_title                                                         
+##   &lt;chr&gt;       &lt;chr&gt;                                                                 
+## 1 CAHPS_GRP_1 CAHPS for MIPS SSM: Getting Timely Care, Appointments, and Information
+## 2 CAHPS_GRP_2 CAHPS for MIPS SSM: How Well Providers Communicate                    
+## 3 CAHPS_GRP_3 CAHPS for MIPS SSM: Patient&#39;s Rating of Provider                      
+## 4 CAHPS_GRP_5 CAHPS for MIPS SSM: Health Promotion and Education                    
+## 5 CAHPS_GRP_8 CAHPS for MIPS SSM: Courteous and Helpful Office Staff                
+## # ℹ 1 more row</code></pre>
+<p>Cả hai cột này đều không phải là lựa chọn tốt để làm tên biến: thì không gợi ý rõ ý nghĩa của biến, còn lại là một câu dài có chứa khoảng trắng. Vì vậy, ta sẽ tạm dùng làm nguồn cho tên cột mới, nhưng trong một phân tích thực tế, bạn có thể muốn tự tạo ra những tên biến vừa ngắn gọn vừa có ý nghĩa hơn.</p>
+<p> có giao diện ngược lại với : thay vì chọn tên cột mới, ta cần chỉ định các cột hiện có để xác định giá trị () và tên cột ().</p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb40-1" tabindex="-1"></a>cms_patient_experience <span class="sc">|&gt;</span> </span>
+<span id="cb40-2"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb40-2" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(</span>
+<span id="cb40-3"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb40-3" tabindex="-1"></a>    <span class="at">names_from =</span> measure_cd,</span>
+<span id="cb40-4"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb40-4" tabindex="-1"></a>    <span class="at">values_from =</span> prf_rate</span>
+<span id="cb40-5"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb40-5" tabindex="-1"></a>  )</span></code></pre></div>
+<pre><code>## # A tibble: 500 × 9
+##   org_pac_id org_nm     measure_title CAHPS_GRP_1 CAHPS_GRP_2 CAHPS_GRP_3 CAHPS_GRP_5
+##   &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;               &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;
+## 1 0446157747 USC CARE … CAHPS for MI…          63          NA          NA          NA
+## 2 0446157747 USC CARE … CAHPS for MI…          NA          87          NA          NA
+## 3 0446157747 USC CARE … CAHPS for MI…          NA          NA          86          NA
+## 4 0446157747 USC CARE … CAHPS for MI…          NA          NA          NA          57
+## 5 0446157747 USC CARE … CAHPS for MI…          NA          NA          NA          NA
+## # ℹ 495 more rows
+## # ℹ 2 more variables: CAHPS_GRP_8 &lt;dbl&gt;, CAHPS_GRP_12 &lt;dbl&gt;</code></pre>
+<p>Kết quả đầu ra vẫn chưa đúng: có vẻ mỗi vẫn xuất hiện nhiều hàng. Lý do là ta còn phải cho biết cột (hoặc các cột) nào có giá trị nhận diện duy nhất từng hàng; trong trường hợp này chính là các biến bắt đầu bằng .</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb42-1" tabindex="-1"></a>cms_patient_experience <span class="sc">|&gt;</span> </span>
+<span id="cb42-2"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb42-2" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(</span>
+<span id="cb42-3"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb42-3" tabindex="-1"></a>    <span class="at">id_cols =</span> <span class="fu">starts_with</span>(<span class="st">&quot;org&quot;</span>),</span>
+<span id="cb42-4"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb42-4" tabindex="-1"></a>    <span class="at">names_from =</span> measure_cd,</span>
+<span id="cb42-5"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb42-5" tabindex="-1"></a>    <span class="at">values_from =</span> prf_rate</span>
+<span id="cb42-6"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb42-6" tabindex="-1"></a>  )</span></code></pre></div>
+<pre><code>## # A tibble: 95 × 8
+##   org_pac_id org_nm       CAHPS_GRP_1 CAHPS_GRP_2 CAHPS_GRP_3 CAHPS_GRP_5 CAHPS_GRP_8
+##   &lt;chr&gt;      &lt;chr&gt;              &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;
+## 1 0446157747 USC CARE ME…          63          87          86          57          85
+## 2 0446162697 ASSOCIATION…          59          85          83          63          88
+## 3 0547164295 BEAVER MEDI…          49          NA          75          44          73
+## 4 0749333730 CAPE PHYSIC…          67          84          85          65          82
+## 5 0840104360 ALLIANCE PH…          66          87          87          64          87
+## # ℹ 90 more rows
+## # ℹ 1 more variable: CAHPS_GRP_12 &lt;dbl&gt;</code></pre>
+<p><strong>Bài tập 3:</strong> Bộ dữ liệu này đến từ khảo sát của Pew Research Center về mối quan hệ giữa tôn giáo và mức thu nhập hộ</p>
+<p>Biến nào trong dataset hiện đang bị “ẩn” trong tên cột? Vì sao cách lưu dữ liệu này chưa phải là tidy data?</p>
+<p>Viết code R sử dụng ‘pivot_longer()’ để đưa dữ liệu về dạng tidy, với các cột: ‘religion’,
+‘income_group’, ‘percent’, ‘sample_size’</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb44-1" tabindex="-1"></a>religion <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&#39;https://raw.githubusercontent.com/chrosemo/data607_fall19_project2/master/pew.csv&#39;</span>, <span class="at">header=</span><span class="cn">TRUE</span>)</span>
+<span id="cb44-2"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb44-2" tabindex="-1"></a><span class="fu">glimpse</span>(religion)</span></code></pre></div>
+<pre><code>## Rows: 12
+## Columns: 6
+## $ Religious.tradition &lt;chr&gt; &quot;Buddhist&quot;, &quot;Catholic&quot;, &quot;Evangelical Protestant&quot;, &quot;Hind…
+## $ Less.than..30.000   &lt;chr&gt; &quot;36%&quot;, &quot;36%&quot;, &quot;35%&quot;, &quot;17%&quot;, &quot;53%&quot;, &quot;48%&quot;, &quot;16%&quot;, &quot;29%&quot;,…
+## $ X.30.000..49.999    &lt;chr&gt; &quot;18%&quot;, &quot;19%&quot;, &quot;22%&quot;, &quot;13%&quot;, &quot;22%&quot;, &quot;25%&quot;, &quot;15%&quot;, &quot;20%&quot;,…
+## $ X.50.000..99.999    &lt;chr&gt; &quot;32%&quot;, &quot;26%&quot;, &quot;28%&quot;, &quot;34%&quot;, &quot;17%&quot;, &quot;22%&quot;, &quot;24%&quot;, &quot;28%&quot;,…
+## $ X.100.000.or.more   &lt;chr&gt; &quot;13%&quot;, &quot;19%&quot;, &quot;14%&quot;, &quot;36%&quot;, &quot;8%&quot;, &quot;4%&quot;, &quot;44%&quot;, &quot;23%&quot;, &quot;…
+## $ Sample.Size         &lt;chr&gt; &quot;233&quot;, &quot;6,137&quot;, &quot;7,462&quot;, &quot;172&quot;, &quot;1,704&quot;, &quot;208&quot;, &quot;708&quot;, …</code></pre>
+<div id="cách-hoạt-động-1" class="section level2 hasAnchor" number="9.1">
+<h2><span class="header-section-number">9.1</span> Cách hoạt động<a href="chuẩn-hóa-theo-chiều-ngang.html#cách-hoạt-động-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Để hiểu cách hoạt động, hãy bắt đầu với một bộ dữ liệu rất đơn giản. Lần này chúng ta có hai bệnh nhân với là và , có ba phép đo huyết áp trên bệnh nhân và hai phép đo trên bệnh nhân :</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb46-1" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
+<span id="cb46-2"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb46-2" tabindex="-1"></a>  <span class="sc">~</span>id, <span class="sc">~</span>measurement, <span class="sc">~</span>value,</span>
+<span id="cb46-3"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb46-3" tabindex="-1"></a>  <span class="st">&quot;A&quot;</span>,        <span class="st">&quot;bp1&quot;</span>,    <span class="dv">100</span>,</span>
+<span id="cb46-4"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb46-4" tabindex="-1"></a>  <span class="st">&quot;B&quot;</span>,        <span class="st">&quot;bp1&quot;</span>,    <span class="dv">140</span>,</span>
+<span id="cb46-5"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb46-5" tabindex="-1"></a>  <span class="st">&quot;B&quot;</span>,        <span class="st">&quot;bp2&quot;</span>,    <span class="dv">115</span>, </span>
+<span id="cb46-6"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb46-6" tabindex="-1"></a>  <span class="st">&quot;A&quot;</span>,        <span class="st">&quot;bp2&quot;</span>,    <span class="dv">120</span>,</span>
+<span id="cb46-7"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb46-7" tabindex="-1"></a>  <span class="st">&quot;A&quot;</span>,        <span class="st">&quot;bp3&quot;</span>,    <span class="dv">105</span></span>
+<span id="cb46-8"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb46-8" tabindex="-1"></a>)</span></code></pre></div>
+<p>Chúng ta sẽ lấy các giá trị từ cột và tên từ cột :</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb47-1" tabindex="-1"></a>df <span class="sc">|&gt;</span> </span>
+<span id="cb47-2"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb47-2" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(</span>
+<span id="cb47-3"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb47-3" tabindex="-1"></a>    <span class="at">names_from =</span> measurement,</span>
+<span id="cb47-4"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb47-4" tabindex="-1"></a>    <span class="at">values_from =</span> value</span>
+<span id="cb47-5"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb47-5" tabindex="-1"></a>  )</span></code></pre></div>
+<pre><code>## # A tibble: 2 × 4
+##   id      bp1   bp2   bp3
+##   &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1 A       100   120   105
+## 2 B       140   115    NA</code></pre>
+<p>Để bắt đầu quá trình, cần xác định trước những gì sẽ đi vào các hàng và cột. Tên các cột mới sẽ là các giá trị duy nhất của .</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb49-1" tabindex="-1"></a>df <span class="sc">|&gt;</span> </span>
+<span id="cb49-2"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb49-2" tabindex="-1"></a>  <span class="fu">distinct</span>(measurement) <span class="sc">|&gt;</span> </span>
+<span id="cb49-3"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb49-3" tabindex="-1"></a>  <span class="fu">pull</span>()</span></code></pre></div>
+<pre><code>## [1] &quot;bp1&quot; &quot;bp2&quot; &quot;bp3&quot;</code></pre>
+<p>Theo mặc định, các hàng trong kết quả được xác định bởi tất cả các biến mà không được sử dụng làm tên cột mới hoặc giá trị. Những biến này được gọi là . Ở đây chỉ có một cột, nhưng nói chung có thể có bao nhiêu cột cũng được.</p>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb51-1" tabindex="-1"></a>df <span class="sc">|&gt;</span> </span>
+<span id="cb51-2"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb51-2" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>measurement, <span class="sc">-</span>value) <span class="sc">|&gt;</span> </span>
+<span id="cb51-3"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb51-3" tabindex="-1"></a>  <span class="fu">distinct</span>()</span></code></pre></div>
+<pre><code>## # A tibble: 2 × 1
+##   id   
+##   &lt;chr&gt;
+## 1 A    
+## 2 B</code></pre>
+<p> sau đó kết hợp các kết quả này để tạo ra một trống:</p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb53-1" tabindex="-1"></a>df <span class="sc">|&gt;</span> </span>
+<span id="cb53-2"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb53-2" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>measurement, <span class="sc">-</span>value) <span class="sc">|&gt;</span> </span>
+<span id="cb53-3"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb53-3" tabindex="-1"></a>  <span class="fu">distinct</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb53-4"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb53-4" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">x =</span> <span class="cn">NA</span>, <span class="at">y =</span> <span class="cn">NA</span>, <span class="at">z =</span> <span class="cn">NA</span>)</span></code></pre></div>
+<pre><code>## # A tibble: 2 × 4
+##   id    x     y     z    
+##   &lt;chr&gt; &lt;lgl&gt; &lt;lgl&gt; &lt;lgl&gt;
+## 1 A     NA    NA    NA   
+## 2 B     NA    NA    NA</code></pre>
+<p>Sau đó, điền tất cả các giá trị còn thiếu dựa trên dữ liệu trong input. Trong trường hợp này, không phải mọi ô trong kết quả đều có giá trị tương ứng trong input, vì bệnh nhân không có phép đo huyết áp thứ ba, nên ô đó vẫn để trống. ta cũng có thể thắc mắc điều gì sẽ xảy ra nếu có nhiều hàng trong input tương ứng với một ô trong output. Ví dụ dưới đây có hai hàng tương ứng với và :</p>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb55-1" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
+<span id="cb55-2"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb55-2" tabindex="-1"></a>  <span class="sc">~</span>id, <span class="sc">~</span>measurement, <span class="sc">~</span>value,</span>
+<span id="cb55-3"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb55-3" tabindex="-1"></a>  <span class="st">&quot;A&quot;</span>,        <span class="st">&quot;bp1&quot;</span>,    <span class="dv">100</span>,</span>
+<span id="cb55-4"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb55-4" tabindex="-1"></a>  <span class="st">&quot;A&quot;</span>,        <span class="st">&quot;bp1&quot;</span>,    <span class="dv">102</span>,</span>
+<span id="cb55-5"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb55-5" tabindex="-1"></a>  <span class="st">&quot;A&quot;</span>,        <span class="st">&quot;bp2&quot;</span>,    <span class="dv">120</span>,</span>
+<span id="cb55-6"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb55-6" tabindex="-1"></a>  <span class="st">&quot;B&quot;</span>,        <span class="st">&quot;bp1&quot;</span>,    <span class="dv">140</span>, </span>
+<span id="cb55-7"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb55-7" tabindex="-1"></a>  <span class="st">&quot;B&quot;</span>,        <span class="st">&quot;bp2&quot;</span>,    <span class="dv">115</span></span>
+<span id="cb55-8"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb55-8" tabindex="-1"></a>)</span></code></pre></div>
+<p>Nếu chúng ta cố gắng thực hiện với dữ liệu này, kết quả sẽ chứa các cột kiểu danh sách ().</p>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb56-1" tabindex="-1"></a>df <span class="sc">|&gt;</span></span>
+<span id="cb56-2"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb56-2" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(</span>
+<span id="cb56-3"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb56-3" tabindex="-1"></a>    <span class="at">names_from =</span> measurement,</span>
+<span id="cb56-4"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb56-4" tabindex="-1"></a>    <span class="at">values_from =</span> value</span>
+<span id="cb56-5"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb56-5" tabindex="-1"></a>  )</span></code></pre></div>
+<pre><code>## Warning: Values from `value` are not uniquely identified; output will contain list-cols.
+## • Use `values_fn = list` to suppress this warning.
+## • Use `values_fn = {summary_fun}` to summarise duplicates.
+## • Use the following dplyr code to identify duplicates.
+##   {data} |&gt;
+##   dplyr::summarise(n = dplyr::n(), .by = c(id, measurement)) |&gt;
+##   dplyr::filter(n &gt; 1L)</code></pre>
+<pre><code>## # A tibble: 2 × 3
+##   id    bp1       bp2      
+##   &lt;chr&gt; &lt;list&gt;    &lt;list&gt;   
+## 1 A     &lt;dbl [2]&gt; &lt;dbl [1]&gt;
+## 2 B     &lt;dbl [1]&gt; &lt;dbl [1]&gt;</code></pre>
+<p>Vì chưa biết cách làm việc với loại dữ liệu này, ta làm theo gợi ý trong cảnh báo () để xác định vấn đề nằm ở đâu:</p>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb59-1" tabindex="-1"></a>df <span class="sc">|&gt;</span> </span>
+<span id="cb59-2"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb59-2" tabindex="-1"></a>  <span class="fu">group_by</span>(id, measurement) <span class="sc">|&gt;</span> </span>
+<span id="cb59-3"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb59-3" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">n =</span> <span class="fu">n</span>(), <span class="at">.groups =</span> <span class="st">&quot;drop&quot;</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb59-4"><a href="chuẩn-hóa-theo-chiều-ngang.html#cb59-4" tabindex="-1"></a>  <span class="fu">filter</span>(n <span class="sc">&gt;</span> <span class="dv">1</span>)</span></code></pre></div>
+<pre><code>## # A tibble: 1 × 3
+##   id    measurement     n
+##   &lt;chr&gt; &lt;chr&gt;       &lt;int&gt;
+## 1 A     bp1             2</code></pre>
+<p>Sau đó, nhiệm vụ là xác định xem dữ liệu của mình đã bị lỗi ở đâu và hoặc là sửa các vấn đề gốc, hoặc là sử dụng kỹ năng nhóm () và tóm tắt () để đảm bảo rằng mỗi tổ hợp giá trị hàng và cột chỉ có một hàng duy nhất.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="chuẩn-hóa-theo-chiều-dọc.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>

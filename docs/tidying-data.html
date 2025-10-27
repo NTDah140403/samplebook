@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 Tidying data) | Tidying data</title>
+  <meta name="description" content="Everything you need (and nothing more) to start a bookdown book." />
+  <meta name="generator" content="bookdown 0.45 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 Tidying data) | Tidying data" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Everything you need (and nothing more) to start a bookdown book." />
+  <meta name="github-repo" content="seankross/bookdown-start" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 Tidying data) | Tidying data" />
+  
+  <meta name="twitter:description" content="Everything you need (and nothing more) to start a bookdown book." />
+  
+
+<meta name="author" content="Nguyễn Thanh Danh" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="technical-details.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Bookdown Book</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="diving-in.html"><a href="diving-in.html"><i class="fa fa-check"></i><b>2</b> Diving In</a></li>
+<li class="chapter" data-level="3" data-path="technical-details.html"><a href="technical-details.html"><i class="fa fa-check"></i><b>3</b> Technical Details</a></li>
+<li class="chapter" data-level="4" data-path="tidying-data.html"><a href="tidying-data.html"><i class="fa fa-check"></i><b>4</b> Tidying data)</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="tidying-data.html"><a href="tidying-data.html#nguyên-tắc-chuẩn-hóa-dữ-liệu-tidying-data"><i class="fa fa-check"></i><b>4.1</b> Nguyên tắc chuẩn hóa dữ liệu (Tidying data)</a></li>
+<li class="chapter" data-level="4.2" data-path="tidying-data.html"><a href="tidying-data.html#tại-sao-phải-chuẩn-hóa-dữ-liệu"><i class="fa fa-check"></i><b>4.2</b> Tại sao phải chuẩn hóa dữ liệu?</a></li>
+<li class="chapter" data-level="4.3" data-path="tidying-data.html"><a href="tidying-data.html#các-vấn-đề-thường-gặp"><i class="fa fa-check"></i><b>4.3</b> Các vấn đề thường gặp</a></li>
+<li class="chapter" data-level="4.4" data-path="tidying-data.html"><a href="tidying-data.html#cách-thức-chuẩn-hóa"><i class="fa fa-check"></i><b>4.4</b> Cách thức chuẩn hóa</a></li>
+<li class="chapter" data-level="4.5" data-path="tidying-data.html"><a href="tidying-data.html#chuẩn-hóa-theo-chiều-dọc"><i class="fa fa-check"></i><b>4.5</b> Chuẩn hóa theo chiều dọc</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="tidying-data.html"><a href="tidying-data.html#dữ-liệu-trong-tên-cột"><i class="fa fa-check"></i><b>4.5.1</b> Dữ liệu trong tên cột</a></li>
+<li class="chapter" data-level="4.5.2" data-path="tidying-data.html"><a href="tidying-data.html#cách-hoạt-động"><i class="fa fa-check"></i><b>4.5.2</b> Cách hoạt động</a></li>
+<li class="chapter" data-level="4.5.3" data-path="tidying-data.html"><a href="tidying-data.html#nhiều-biến-được-lưu-trong-một-cột"><i class="fa fa-check"></i><b>4.5.3</b> Nhiều biến được lưu trong một cột</a></li>
+<li class="chapter" data-level="4.5.4" data-path="tidying-data.html"><a href="tidying-data.html#dữ-liệu-và-biến-nằm-trong-tên-cột"><i class="fa fa-check"></i><b>4.5.4</b> Dữ liệu và biến nằm trong tên cột</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="tidying-data.html"><a href="tidying-data.html#chuẩn-hóa-theo-chiều-ngang"><i class="fa fa-check"></i><b>4.6</b> Chuẩn hóa theo chiều ngang</a>
+<ul>
+<li class="chapter" data-level="4.6.1" data-path="tidying-data.html"><a href="tidying-data.html#cách-hoạt-động-1"><i class="fa fa-check"></i><b>4.6.1</b> Cách hoạt động</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Tidying data</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="tidying-data" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Tidying data)<a href="tidying-data.html#tidying-data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Hầu hết dữ liệu trong thông kê được là dữ liệu dạng bảng, được cấu tạo bởi hàng và cột.</p>
+<div id="nguyên-tắc-chuẩn-hóa-dữ-liệu-tidying-data" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Nguyên tắc chuẩn hóa dữ liệu (Tidying data)<a href="tidying-data.html#nguyên-tắc-chuẩn-hóa-dữ-liệu-tidying-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="tidying-data.html#cb1-1" tabindex="-1"></a>table1</span></code></pre></div>
+<pre><code>## # A tibble: 6 × 4
+##   country      year  cases population
+##   &lt;chr&gt;       &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;
+## 1 Afghanistan  1999    745   19987071
+## 2 Afghanistan  2000   2666   20595360
+## 3 Brazil       1999  37737  172006362
+## 4 Brazil       2000  80488  174504898
+## 5 China        1999 212258 1272915272
+## # ℹ 1 more row</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="tidying-data.html#cb3-1" tabindex="-1"></a>table2</span></code></pre></div>
+<pre><code>## # A tibble: 12 × 4
+##   country      year type          count
+##   &lt;chr&gt;       &lt;dbl&gt; &lt;chr&gt;         &lt;dbl&gt;
+## 1 Afghanistan  1999 cases           745
+## 2 Afghanistan  1999 population 19987071
+## 3 Afghanistan  2000 cases          2666
+## 4 Afghanistan  2000 population 20595360
+## 5 Brazil       1999 cases         37737
+## # ℹ 7 more rows</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="tidying-data.html#cb5-1" tabindex="-1"></a>table3</span></code></pre></div>
+<pre><code>## # A tibble: 6 × 3
+##   country      year rate             
+##   &lt;chr&gt;       &lt;dbl&gt; &lt;chr&gt;            
+## 1 Afghanistan  1999 745/19987071     
+## 2 Afghanistan  2000 2666/20595360    
+## 3 Brazil       1999 37737/172006362  
+## 4 Brazil       2000 80488/174504898  
+## 5 China        1999 212258/1272915272
+## # ℹ 1 more row</code></pre>
+<p>Các bảng dữ liệu trên có điểm gì khác nhau? Bảng nào phù hợp để phân tích?</p>
+<p>Đây đều là những cách biểu diễn cùng một dữ liệu cơ bản, nhưng chúng không dễ sử dụng như nhau. Trong đó, sẽ dễ làm việc hơn nhiều trong vì nó đã ở dạng tidy.</p>
+<p>Có 3 nguyên tắc để chuẩn hóa dữ liệu (dạng bảng):</p>
+</div>
+<div id="tại-sao-phải-chuẩn-hóa-dữ-liệu" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Tại sao phải chuẩn hóa dữ liệu?<a href="tidying-data.html#tại-sao-phải-chuẩn-hóa-dữ-liệu" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p> và tất cả các gói khác trong được thiết kế để hoạt động với dữ liệu gọn gàng. Dưới đây là một vài ví dụ nhỏ cho thấy cách bạn có thể làm việc với </p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="tidying-data.html#cb7-1" tabindex="-1"></a><span class="co"># Compute rate per 10,000</span></span>
+<span id="cb7-2"><a href="tidying-data.html#cb7-2" tabindex="-1"></a>table1 <span class="sc">|&gt;</span></span>
+<span id="cb7-3"><a href="tidying-data.html#cb7-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">rate =</span> cases <span class="sc">/</span> population <span class="sc">*</span> <span class="dv">10000</span>)</span></code></pre></div>
+<pre><code>## # A tibble: 6 × 5
+##   country      year  cases population     rate
+##   &lt;chr&gt;       &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;    &lt;dbl&gt;
+## 1 Afghanistan  1999    745   19987071 0.372741
+## 2 Afghanistan  2000   2666   20595360 1.29447 
+## 3 Brazil       1999  37737  172006362 2.19393 
+## 4 Brazil       2000  80488  174504898 4.61236 
+## 5 China        1999 212258 1272915272 1.66750 
+## # ℹ 1 more row</code></pre>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="tidying-data.html#cb9-1" tabindex="-1"></a><span class="co"># Compute total cases per year</span></span>
+<span id="cb9-2"><a href="tidying-data.html#cb9-2" tabindex="-1"></a>table1 <span class="sc">|&gt;</span> </span>
+<span id="cb9-3"><a href="tidying-data.html#cb9-3" tabindex="-1"></a>  <span class="fu">group_by</span>(year) <span class="sc">|&gt;</span> </span>
+<span id="cb9-4"><a href="tidying-data.html#cb9-4" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">total_cases =</span> <span class="fu">sum</span>(cases))</span></code></pre></div>
+<pre><code>## # A tibble: 2 × 2
+##    year total_cases
+##   &lt;dbl&gt;       &lt;dbl&gt;
+## 1  1999      250740
+## 2  2000      296920</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="tidying-data.html#cb11-1" tabindex="-1"></a><span class="co"># Visualize changes over time</span></span>
+<span id="cb11-2"><a href="tidying-data.html#cb11-2" tabindex="-1"></a><span class="fu">ggplot</span>(table1, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> cases)) <span class="sc">+</span></span>
+<span id="cb11-3"><a href="tidying-data.html#cb11-3" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">group =</span> country), <span class="at">color =</span> <span class="st">&quot;grey50&quot;</span>) <span class="sc">+</span></span>
+<span id="cb11-4"><a href="tidying-data.html#cb11-4" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> country, <span class="at">shape =</span> country)) <span class="sc">+</span></span>
+<span id="cb11-5"><a href="tidying-data.html#cb11-5" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">1999</span>, <span class="dv">2000</span>)) <span class="co"># x-axis breaks at 1999 and 2000</span></span></code></pre></div>
+<p><img src="04-Data_tidying_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p><strong>Bài tập 1:</strong> Đối với mỗi bảng dữ liệu trên, hãy mô tả ý nghĩa của từng quan sát và từng cột.</p>
+<p><strong>Bài tập 2:</strong> Hãy phác thảo quy trình bạn sẽ sử dụng để tính toán tỉ lệ (rate) cho và . Bạn sẽ cần thực hiện bốn thao tác:</p>
+<ul>
+<li><p>Trích xuất số ca bệnh lao (TB cases) của mỗi quốc gia theo từng năm.</p></li>
+<li><p>Trích xuất dữ liệu dân số (population) tương ứng của mỗi quốc gia theo từng năm.</p></li>
+<li><p>Chia số ca bệnh cho dân số, sau đó nhân với 10000.</p></li>
+<li><p>Lưu lại kết quả vào vị trí thích hợp.</p></li>
+</ul>
+</div>
+<div id="các-vấn-đề-thường-gặp" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Các vấn đề thường gặp<a href="tidying-data.html#các-vấn-đề-thường-gặp" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+
+</div>
+<div id="cách-thức-chuẩn-hóa" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Cách thức chuẩn hóa<a href="tidying-data.html#cách-thức-chuẩn-hóa" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Nguyên tắc chuẩn hóa nghe có vẻ hiển nhiên, nhưng thực tế đa các dataset thực tết không chuẩn.</p>
+<p>Lý do dữ liệu thường không chuẩn:</p>
+<ul>
+<li><p>Cách tổ chức dữ liệu thường nhằm mục đích khác ngoài phân tích. → Ví dụ: thiết kế cho việc nhập liệu dễ dàng, chứ không phải cho phân tích.</p></li>
+<li><p>Nhiều người không biết về nguyên tắc và cũng khó tự rút ra nếu không thường xuyên làm việc với dữ liệu.</p></li>
+</ul>
+<p><strong>Wide format (dạng rộng):</strong> biến được trải ra thành nhiều cột.</p>
+<p><strong>Long format (dạng dài):</strong> chỉ có một cột cho tên biến và một cột cho giá trị, còn mỗi hàng tương ứng với một quan sát duy nhất</p>
+<p>Quy trình tidying:</p>
+<ul>
+<li><p>Xác định đâu là biến (variables) và đâu là quan sát (observations).</p></li>
+<li><p>Đôi khi dễ, nhưng cũng có khi cần hỏi người tạo dữ liệu.</p></li>
+<li><p>Dùng các thao tác pivot để đưa dữ liệu về dạng tidy:</p>
+<ul>
+<li><p>Lengthening (chuẩn hóa theo chiều dọc): chuyển dữ liệu từ dạng wide format sang long format</p></li>
+<li><p>Widening (chuẩn hóa theo chiều ngang): chuyển dữ liệu từ dạng long format sang wide format</p></li>
+</ul></li>
+</ul>
+</div>
+<div id="chuẩn-hóa-theo-chiều-dọc" class="section level2 hasAnchor" number="4.5">
+<h2><span class="header-section-number">4.5</span> Chuẩn hóa theo chiều dọc<a href="tidying-data.html#chuẩn-hóa-theo-chiều-dọc" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="dữ-liệu-trong-tên-cột" class="section level3 hasAnchor" number="4.5.1">
+<h3><span class="header-section-number">4.5.1</span> Dữ liệu trong tên cột<a href="tidying-data.html#dữ-liệu-trong-tên-cột" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="tidying-data.html#cb12-1" tabindex="-1"></a>billboard</span></code></pre></div>
+<pre><code>## # A tibble: 317 × 79
+##   artist     track date.entered   wk1   wk2   wk3   wk4   wk5   wk6   wk7   wk8   wk9
+##   &lt;chr&gt;      &lt;chr&gt; &lt;date&gt;       &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1 2 Pac      Baby… 2000-02-26      87    82    72    77    87    94    99    NA    NA
+## 2 2Ge+her    The … 2000-09-02      91    87    92    NA    NA    NA    NA    NA    NA
+## 3 3 Doors D… Kryp… 2000-04-08      81    70    68    67    66    57    54    53    51
+## 4 3 Doors D… Loser 2000-10-21      76    76    72    69    67    65    55    59    62
+## 5 504 Boyz   Wobb… 2000-04-15      57    34    25    17    17    31    36    49    53
+## # ℹ 312 more rows
+## # ℹ 67 more variables: wk10 &lt;dbl&gt;, wk11 &lt;dbl&gt;, wk12 &lt;dbl&gt;, wk13 &lt;dbl&gt;, wk14 &lt;dbl&gt;,
+## #   wk15 &lt;dbl&gt;, wk16 &lt;dbl&gt;, wk17 &lt;dbl&gt;, wk18 &lt;dbl&gt;, wk19 &lt;dbl&gt;, wk20 &lt;dbl&gt;,
+## #   wk21 &lt;dbl&gt;, wk22 &lt;dbl&gt;, wk23 &lt;dbl&gt;, wk24 &lt;dbl&gt;, wk25 &lt;dbl&gt;, wk26 &lt;dbl&gt;,
+## #   wk27 &lt;dbl&gt;, wk28 &lt;dbl&gt;, wk29 &lt;dbl&gt;, wk30 &lt;dbl&gt;, wk31 &lt;dbl&gt;, wk32 &lt;dbl&gt;,
+## #   wk33 &lt;dbl&gt;, wk34 &lt;dbl&gt;, wk35 &lt;dbl&gt;, wk36 &lt;dbl&gt;, wk37 &lt;dbl&gt;, wk38 &lt;dbl&gt;,
+## #   wk39 &lt;dbl&gt;, wk40 &lt;dbl&gt;, wk41 &lt;dbl&gt;, wk42 &lt;dbl&gt;, wk43 &lt;dbl&gt;, wk44 &lt;dbl&gt;, …</code></pre>
+<p>Trong dataset:</p>
+<ul>
+<li><p>: tên nghệ sĩ, ban nhạc.</p></li>
+<li><p>: tên bài hát.</p></li>
+<li><p>: ngày bài hát bắt đầu lọt vào bảng xếp hạng Billboard.</p></li>
+<li><p>: Thứ hạng của bài hát theo từng tuần.</p></li>
+</ul>
+<p>Ở đây, các cột tên là biến tuần trong khi ô giá trị lại là thứ hạng. Để chuẩn hóa dữ liệu này ta sử dụng .</p>
+<p>Các tham số trong \texttt{pivot_longer():</p>
+<ul>
+<li><p>: Data frame cần pivot.</p></li>
+<li><p>: (tidy-select) Các cột cần chuyển về dạng dài.</p></li>
+<li><p>: Cách sắp xếp các dòng sau pivot.</p></li>
+<li><p>: Tên cột (hoặc nhiều cột) mới sinh ra từ tên cột ban đầu.</p>
+<ul>
+<li><p>Nếu độ dài = 0 hoặc : không tạo thêm cột.</p></li>
+<li><p>Nếu độ dài = 1: tạo một cột chứa tên cột gốc.</p></li>
+<li><p>Nếu độ dài &gt; 1: phải dùng thêm hoặc để tách tên cột.</p></li>
+<li><p>Đặc biệt:</p>
+<ul>
+<li><p> = bỏ qua thành phần đó trong tên cột.</p></li>
+<li><p> = phần đó của tên cột sẽ trở thành tên biến mới (ghi đè ).</p></li>
+</ul></li>
+</ul></li>
+<li><p>: Regex để bỏ tiền tố trong tên cột.</p></li>
+<li><p>: vị trí hoặc regex để tách tên cột.</p></li>
+<li><p>: regex có nhóm để trích thành phần.</p></li>
+<li><p>, : Khai báo trước kiểu dữ liệu mong muốn.</p></li>
+<li><p>, : Hàm để chuyển đổi kiểu dữ liệu sau khi pivot.</p></li>
+<li><p>: Xử lý tên cột trùng lặp</p></li>
+<li><p>: Tên cột mới chứa giá trị từ các ô dữ liệu. (Bị bỏ qua nếu dùng ).</p></li>
+<li><p>: Nếu , bỏ dòng có (chỉ giữ quan sát thực).</p></li>
+</ul>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="tidying-data.html#cb14-1" tabindex="-1"></a>billboard <span class="sc">|&gt;</span> </span>
+<span id="cb14-2"><a href="tidying-data.html#cb14-2" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb14-3"><a href="tidying-data.html#cb14-3" tabindex="-1"></a>    <span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="st">&quot;wk&quot;</span>), </span>
+<span id="cb14-4"><a href="tidying-data.html#cb14-4" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="st">&quot;week&quot;</span>, </span>
+<span id="cb14-5"><a href="tidying-data.html#cb14-5" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">&quot;rank&quot;</span></span>
+<span id="cb14-6"><a href="tidying-data.html#cb14-6" tabindex="-1"></a>  )</span></code></pre></div>
+<pre><code>## # A tibble: 24,092 × 5
+##   artist track                   date.entered week   rank
+##   &lt;chr&gt;  &lt;chr&gt;                   &lt;date&gt;       &lt;chr&gt; &lt;dbl&gt;
+## 1 2 Pac  Baby Don&#39;t Cry (Keep... 2000-02-26   wk1      87
+## 2 2 Pac  Baby Don&#39;t Cry (Keep... 2000-02-26   wk2      82
+## 3 2 Pac  Baby Don&#39;t Cry (Keep... 2000-02-26   wk3      72
+## 4 2 Pac  Baby Don&#39;t Cry (Keep... 2000-02-26   wk4      77
+## 5 2 Pac  Baby Don&#39;t Cry (Keep... 2000-02-26   wk5      87
+## # ℹ 24,087 more rows</code></pre>
+<p>Sau dữ liệu, có ba đối số chính:</p>
+<ul>
+<li><p> chỉ định những cột cần được pivot, tức là những cột không phải biến. Đối số này dùng cú pháp giống , nên ở đây ta có thể dùng hoặc .</p></li>
+<li><p> đặt tên cho biến được lưu trong tên cột, ở đây ta đặt tên biến đó là .</p></li>
+<li><p> đặt tên cho biến được lưu trong các giá trị ô, ở đây ta đặt tên biến đó là .</p></li>
+</ul>
+<p>Lưu ý rằng trong code, và được để trong dấu nháy kép vì đó là các biến mới ta tạo ra, chúng chưa tồn tại trong dữ liệu khi ta gọi .</p>
+<p>Bây giờ ta hãy chú ý đến data frame sau khi được làm dài. Điều gì xảy ra nếu một bài hát nằm trong top 100 ít hơn 76 tuần? Ví dụ, bài của 2 Pac “Baby Don’t Cry”. Kết quả ở trên cho thấy nó chỉ nằm trong top 100 trong 7 tuần, và tất cả các tuần còn lại được điền bằng giá trị thiếu (). Những giá trị này thật ra không đại diện cho quan sát bị thiếu, mà là do cấu trúc của bắt buộc phải có. Vì vậy, ta có thể yêu cầu loại bỏ chúng bằng cách đặt .</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="tidying-data.html#cb16-1" tabindex="-1"></a>billboard <span class="sc">|&gt;</span> </span>
+<span id="cb16-2"><a href="tidying-data.html#cb16-2" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb16-3"><a href="tidying-data.html#cb16-3" tabindex="-1"></a>    <span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="st">&quot;wk&quot;</span>), </span>
+<span id="cb16-4"><a href="tidying-data.html#cb16-4" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="st">&quot;week&quot;</span>, </span>
+<span id="cb16-5"><a href="tidying-data.html#cb16-5" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">&quot;rank&quot;</span>,</span>
+<span id="cb16-6"><a href="tidying-data.html#cb16-6" tabindex="-1"></a>    <span class="at">values_drop_na =</span> <span class="cn">TRUE</span></span>
+<span id="cb16-7"><a href="tidying-data.html#cb16-7" tabindex="-1"></a>  )</span></code></pre></div>
+<pre><code>## # A tibble: 5,307 × 5
+##   artist track                   date.entered week   rank
+##   &lt;chr&gt;  &lt;chr&gt;                   &lt;date&gt;       &lt;chr&gt; &lt;dbl&gt;
+## 1 2 Pac  Baby Don&#39;t Cry (Keep... 2000-02-26   wk1      87
+## 2 2 Pac  Baby Don&#39;t Cry (Keep... 2000-02-26   wk2      82
+## 3 2 Pac  Baby Don&#39;t Cry (Keep... 2000-02-26   wk3      72
+## 4 2 Pac  Baby Don&#39;t Cry (Keep... 2000-02-26   wk4      77
+## 5 2 Pac  Baby Don&#39;t Cry (Keep... 2000-02-26   wk5      87
+## # ℹ 5,302 more rows</code></pre>
+<p>Số lượng hàng bây giờ ít hơn nhiều, cho thấy rằng nhiều hàng chứa đã bị loại bỏ.</p>
+<p>Bạn cũng có thể thắc mắc: điều gì xảy ra nếu một bài hát nằm trong top 100 hơn 76 tuần? Với dữ liệu này ta không thể biết được, nhưng có thể đoán rằng các cột bổ sung như , , … sẽ được thêm vào dataset.</p>
+<p>Dữ liệu hiện tại đã ở dạng tidy, nhưng ta có thể làm cho việc tính toán sau này dễ dàng hơn bằng cách chuyển đổi giá trị của từ chuỗi ký tự thành số, sử dụng và . Hàm rất tiện lợi vì nó sẽ trích xuất số đầu tiên trong một chuỗi, và bỏ qua toàn bộ phần ký tự khác</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="tidying-data.html#cb18-1" tabindex="-1"></a>billboard_longer <span class="ot">&lt;-</span> billboard <span class="sc">|&gt;</span> </span>
+<span id="cb18-2"><a href="tidying-data.html#cb18-2" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb18-3"><a href="tidying-data.html#cb18-3" tabindex="-1"></a>    <span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="st">&quot;wk&quot;</span>), </span>
+<span id="cb18-4"><a href="tidying-data.html#cb18-4" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="st">&quot;week&quot;</span>, </span>
+<span id="cb18-5"><a href="tidying-data.html#cb18-5" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">&quot;rank&quot;</span>,</span>
+<span id="cb18-6"><a href="tidying-data.html#cb18-6" tabindex="-1"></a>    <span class="at">values_drop_na =</span> <span class="cn">TRUE</span></span>
+<span id="cb18-7"><a href="tidying-data.html#cb18-7" tabindex="-1"></a>  ) <span class="sc">|&gt;</span> </span>
+<span id="cb18-8"><a href="tidying-data.html#cb18-8" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb18-9"><a href="tidying-data.html#cb18-9" tabindex="-1"></a>    <span class="at">week =</span> <span class="fu">parse_number</span>(week)</span>
+<span id="cb18-10"><a href="tidying-data.html#cb18-10" tabindex="-1"></a>  )</span>
+<span id="cb18-11"><a href="tidying-data.html#cb18-11" tabindex="-1"></a>billboard_longer</span></code></pre></div>
+<pre><code>## # A tibble: 5,307 × 5
+##   artist track                   date.entered  week  rank
+##   &lt;chr&gt;  &lt;chr&gt;                   &lt;date&gt;       &lt;dbl&gt; &lt;dbl&gt;
+## 1 2 Pac  Baby Don&#39;t Cry (Keep... 2000-02-26       1    87
+## 2 2 Pac  Baby Don&#39;t Cry (Keep... 2000-02-26       2    82
+## 3 2 Pac  Baby Don&#39;t Cry (Keep... 2000-02-26       3    72
+## 4 2 Pac  Baby Don&#39;t Cry (Keep... 2000-02-26       4    77
+## 5 2 Pac  Baby Don&#39;t Cry (Keep... 2000-02-26       5    87
+## # ℹ 5,302 more rows</code></pre>
+<p>Bây giờ khi đã có tất cả số tuần trong một biến và tất cả giá trị thứ hạng trong một biến khác, ta ở vị trí thuận lợi để trực quan hóa cách thứ hạng của bài hát thay đổi theo thời gian.</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="tidying-data.html#cb20-1" tabindex="-1"></a>billboard_longer <span class="sc">|&gt;</span> </span>
+<span id="cb20-2"><a href="tidying-data.html#cb20-2" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> week, <span class="at">y =</span> rank, <span class="at">group =</span> track)) <span class="sc">+</span> </span>
+<span id="cb20-3"><a href="tidying-data.html#cb20-3" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">alpha =</span> <span class="fl">0.25</span>) <span class="sc">+</span> </span>
+<span id="cb20-4"><a href="tidying-data.html#cb20-4" tabindex="-1"></a>  <span class="fu">scale_y_reverse</span>()</span></code></pre></div>
+<p><img src="04-Data_tidying_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>Ta có thể thấy rằng rất ít bài hát duy trì trong top 100 quá 20 tuần. Với dữ liệu đã được chuẩn hóa ta có thể tạo được Thống kê theo nghệ sĩ (số bài hát, số tuần trụ BXH, rank trung bình)</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="tidying-data.html#cb21-1" tabindex="-1"></a>billboard_longer <span class="sc">%&gt;%</span></span>
+<span id="cb21-2"><a href="tidying-data.html#cb21-2" tabindex="-1"></a>  <span class="fu">group_by</span>(artist) <span class="sc">%&gt;%</span></span>
+<span id="cb21-3"><a href="tidying-data.html#cb21-3" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb21-4"><a href="tidying-data.html#cb21-4" tabindex="-1"></a>    <span class="at">n_songs =</span> <span class="fu">n_distinct</span>(track),</span>
+<span id="cb21-5"><a href="tidying-data.html#cb21-5" tabindex="-1"></a>    <span class="at">total_weeks =</span> <span class="fu">n_distinct</span>(<span class="fu">paste</span>(track, week)),</span>
+<span id="cb21-6"><a href="tidying-data.html#cb21-6" tabindex="-1"></a>    <span class="at">avg_rank =</span> <span class="fu">mean</span>(rank, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb21-7"><a href="tidying-data.html#cb21-7" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb21-8"><a href="tidying-data.html#cb21-8" tabindex="-1"></a>  <span class="fu">arrange</span>(avg_rank)</span></code></pre></div>
+<pre><code>## # A tibble: 228 × 4
+##   artist                           n_songs total_weeks avg_rank
+##   &lt;chr&gt;                              &lt;int&gt;       &lt;int&gt;    &lt;dbl&gt;
+## 1 &quot;Santana&quot;                              1          26  10.5   
+## 2 &quot;Elliott, Missy \&quot;Misdemeanor\&quot;&quot;       1          21  14.3333
+## 3 &quot;matchbox twenty&quot;                      1          39  18.6410
+## 4 &quot;N&#39;Sync&quot;                               3          74  18.6486
+## 5 &quot;Janet&quot;                                1          24  19.4167
+## # ℹ 223 more rows</code></pre>
+</div>
+<div id="cách-hoạt-động" class="section level3 hasAnchor" number="4.5.2">
+<h3><span class="header-section-number">4.5.2</span> Cách hoạt động<a href="tidying-data.html#cách-hoạt-động" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="tidying-data.html#cb23-1" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
+<span id="cb23-2"><a href="tidying-data.html#cb23-2" tabindex="-1"></a>  <span class="sc">~</span>id,  <span class="sc">~</span>bp1, <span class="sc">~</span>bp2,</span>
+<span id="cb23-3"><a href="tidying-data.html#cb23-3" tabindex="-1"></a>   <span class="st">&quot;A&quot;</span>,  <span class="dv">100</span>,  <span class="dv">120</span>,</span>
+<span id="cb23-4"><a href="tidying-data.html#cb23-4" tabindex="-1"></a>   <span class="st">&quot;B&quot;</span>,  <span class="dv">140</span>,  <span class="dv">115</span>,</span>
+<span id="cb23-5"><a href="tidying-data.html#cb23-5" tabindex="-1"></a>   <span class="st">&quot;C&quot;</span>,  <span class="dv">120</span>,  <span class="dv">125</span></span>
+<span id="cb23-6"><a href="tidying-data.html#cb23-6" tabindex="-1"></a>)</span></code></pre></div>
+<p>Chúng ta muốn bộ dữ liệu mới có ba biến: (đã tồn tại), (tên các cột) và (giá trị trong các ô). Để làm được điều này, chúng ta cần sử dụng trên :</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="tidying-data.html#cb24-1" tabindex="-1"></a>df <span class="sc">|&gt;</span> </span>
+<span id="cb24-2"><a href="tidying-data.html#cb24-2" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb24-3"><a href="tidying-data.html#cb24-3" tabindex="-1"></a>    <span class="at">cols =</span> bp1<span class="sc">:</span>bp2,</span>
+<span id="cb24-4"><a href="tidying-data.html#cb24-4" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="st">&quot;measurement&quot;</span>,</span>
+<span id="cb24-5"><a href="tidying-data.html#cb24-5" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">&quot;value&quot;</span></span>
+<span id="cb24-6"><a href="tidying-data.html#cb24-6" tabindex="-1"></a>  )</span></code></pre></div>
+<pre><code>## # A tibble: 6 × 3
+##   id    measurement value
+##   &lt;chr&gt; &lt;chr&gt;       &lt;dbl&gt;
+## 1 A     bp1           100
+## 2 A     bp2           120
+## 3 B     bp1           140
+## 4 B     bp2           115
+## 5 C     bp1           120
+## # ℹ 1 more row</code></pre>
+<p><img src="images/variables.png" width="724" />
+<img src="images/column-names.png" width="724" />
+<img src="images/cell-values.png" width="724" /></p>
+</div>
+<div id="nhiều-biến-được-lưu-trong-một-cột" class="section level3 hasAnchor" number="4.5.3">
+<h3><span class="header-section-number">4.5.3</span> Nhiều biến được lưu trong một cột<a href="tidying-data.html#nhiều-biến-được-lưu-trong-một-cột" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="tidying-data.html#cb26-1" tabindex="-1"></a>who2</span></code></pre></div>
+<pre><code>## # A tibble: 7,240 × 58
+##   country     year sp_m_014 sp_m_1524 sp_m_2534 sp_m_3544 sp_m_4554 sp_m_5564 sp_m_65
+##   &lt;chr&gt;      &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
+## 1 Afghanist…  1980       NA        NA        NA        NA        NA        NA      NA
+## 2 Afghanist…  1981       NA        NA        NA        NA        NA        NA      NA
+## 3 Afghanist…  1982       NA        NA        NA        NA        NA        NA      NA
+## 4 Afghanist…  1983       NA        NA        NA        NA        NA        NA      NA
+## 5 Afghanist…  1984       NA        NA        NA        NA        NA        NA      NA
+## # ℹ 7,235 more rows
+## # ℹ 49 more variables: sp_f_014 &lt;dbl&gt;, sp_f_1524 &lt;dbl&gt;, sp_f_2534 &lt;dbl&gt;,
+## #   sp_f_3544 &lt;dbl&gt;, sp_f_4554 &lt;dbl&gt;, sp_f_5564 &lt;dbl&gt;, sp_f_65 &lt;dbl&gt;,
+## #   sn_m_014 &lt;dbl&gt;, sn_m_1524 &lt;dbl&gt;, sn_m_2534 &lt;dbl&gt;, sn_m_3544 &lt;dbl&gt;,
+## #   sn_m_4554 &lt;dbl&gt;, sn_m_5564 &lt;dbl&gt;, sn_m_65 &lt;dbl&gt;, sn_f_014 &lt;dbl&gt;,
+## #   sn_f_1524 &lt;dbl&gt;, sn_f_2534 &lt;dbl&gt;, sn_f_3544 &lt;dbl&gt;, sn_f_4554 &lt;dbl&gt;,
+## #   sn_f_5564 &lt;dbl&gt;, sn_f_65 &lt;dbl&gt;, ep_m_014 &lt;dbl&gt;, ep_m_1524 &lt;dbl&gt;, …</code></pre>
+<p>Dataset này, được thu thập bởi Tổ chức Y tế Thế giới (WHO), ghi lại thông tin về chẩn đoán bệnh lao (tuberculosis). Có hai cột vốn đã là biến và dễ diễn giải: và . Tiếp theo đó là 56 cột như , , và . Nếu bạn quan sát các tên cột này đủ lâu, bạn sẽ nhận ra một mẫu chung. Mỗi tên cột được tạo bởi ba phần, được phân tách bằng dấu gạch dưới _ :</p>
+<p>Phần thứ nhất: //, mô tả phương pháp chẩn đoán được sử dụng.</p>
+<p>Phần thứ hai: /, chỉ giới tính (mã hóa nhị phân trong dataset này).</p>
+<p>Phần thứ ba: //////, biểu thị nhóm tuổi (ví dụ = 0–14 tuổi).</p>
+<p>Như vậy, trong trường hợp này ta có sáu phần thông tin được ghi trong :</p>
+<ul>
+<li><p>quốc gia</p></li>
+<li><p>năm</p></li>
+<li><p>phương pháp chẩn đoán</p></li>
+<li><p>giới tính</p></li>
+<li><p>nhóm tuổi</p></li>
+<li><p>số lượng bệnh nhân trong nhóm.</p></li>
+</ul>
+<p>Để sắp xếp 6 thông tin này vào 6 cột riêng biệt, ta sử dụng với:</p>
+<p>một vector cột cho , hướng dẫn tách tên biến gốc thành nhiều phần qua ,và một tên cột cho .</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="tidying-data.html#cb28-1" tabindex="-1"></a>who2 <span class="sc">|&gt;</span> </span>
+<span id="cb28-2"><a href="tidying-data.html#cb28-2" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb28-3"><a href="tidying-data.html#cb28-3" tabindex="-1"></a>    <span class="at">cols =</span> <span class="sc">!</span>(country<span class="sc">:</span>year),</span>
+<span id="cb28-4"><a href="tidying-data.html#cb28-4" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="fu">c</span>(<span class="st">&quot;diagnosis&quot;</span>, <span class="st">&quot;gender&quot;</span>, <span class="st">&quot;age&quot;</span>), </span>
+<span id="cb28-5"><a href="tidying-data.html#cb28-5" tabindex="-1"></a>    <span class="at">names_sep =</span> <span class="st">&quot;_&quot;</span>,</span>
+<span id="cb28-6"><a href="tidying-data.html#cb28-6" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">&quot;count&quot;</span></span>
+<span id="cb28-7"><a href="tidying-data.html#cb28-7" tabindex="-1"></a>  )</span></code></pre></div>
+<pre><code>## # A tibble: 405,440 × 6
+##   country      year diagnosis gender age   count
+##   &lt;chr&gt;       &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;  &lt;chr&gt; &lt;dbl&gt;
+## 1 Afghanistan  1980 sp        m      014      NA
+## 2 Afghanistan  1980 sp        m      1524     NA
+## 3 Afghanistan  1980 sp        m      2534     NA
+## 4 Afghanistan  1980 sp        m      3544     NA
+## 5 Afghanistan  1980 sp        m      4554     NA
+## # ℹ 405,435 more rows</code></pre>
+<p>Một các khác có thể được sử dụng là sử dụng tham số kết hợp việc sử dụng kĩ thuật phân tích chuỗi để trích xuất thông tin từ biến.</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="tidying-data.html#cb30-1" tabindex="-1"></a>who2 <span class="sc">|&gt;</span> </span>
+<span id="cb30-2"><a href="tidying-data.html#cb30-2" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb30-3"><a href="tidying-data.html#cb30-3" tabindex="-1"></a>    <span class="at">cols =</span> <span class="sc">!</span>(country<span class="sc">:</span>year), </span>
+<span id="cb30-4"><a href="tidying-data.html#cb30-4" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="fu">c</span>(<span class="st">&quot;diagnosis&quot;</span>, <span class="st">&quot;gender&quot;</span>, <span class="st">&quot;age&quot;</span>), </span>
+<span id="cb30-5"><a href="tidying-data.html#cb30-5" tabindex="-1"></a>    <span class="at">names_pattern =</span> <span class="st">&quot;([a-z]+)_([mf])_(.*)&quot;</span>, </span>
+<span id="cb30-6"><a href="tidying-data.html#cb30-6" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">&quot;count&quot;</span></span>
+<span id="cb30-7"><a href="tidying-data.html#cb30-7" tabindex="-1"></a>  )</span></code></pre></div>
+<pre><code>## # A tibble: 405,440 × 6
+##   country      year diagnosis gender age   count
+##   &lt;chr&gt;       &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;  &lt;chr&gt; &lt;dbl&gt;
+## 1 Afghanistan  1980 sp        m      014      NA
+## 2 Afghanistan  1980 sp        m      1524     NA
+## 3 Afghanistan  1980 sp        m      2534     NA
+## 4 Afghanistan  1980 sp        m      3544     NA
+## 5 Afghanistan  1980 sp        m      4554     NA
+## # ℹ 405,435 more rows</code></pre>
+</div>
+<div id="dữ-liệu-và-biến-nằm-trong-tên-cột" class="section level3 hasAnchor" number="4.5.4">
+<h3><span class="header-section-number">4.5.4</span> Dữ liệu và biến nằm trong tên cột<a href="tidying-data.html#dữ-liệu-và-biến-nằm-trong-tên-cột" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="tidying-data.html#cb32-1" tabindex="-1"></a>household</span></code></pre></div>
+<pre><code>## # A tibble: 5 × 5
+##   family dob_child1 dob_child2 name_child1 name_child2
+##    &lt;int&gt; &lt;date&gt;     &lt;date&gt;     &lt;chr&gt;       &lt;chr&gt;      
+## 1      1 1998-11-26 2000-01-29 Susan       Jose       
+## 2      2 1996-06-22 NA         Mark        &lt;NA&gt;       
+## 3      3 2002-07-11 2004-04-05 Sam         Seth       
+## 4      4 2004-10-10 2009-08-27 Craig       Khai       
+## 5      5 2000-12-05 2005-02-28 Parker      Gracie</code></pre>
+<p>Bộ dữ liệu này chứa thông tin về năm gia đình, với tên và ngày sinh của tối đa hai đứa trẻ. Thách thức mới trong bộ dữ liệu này là tên cột lại chứa tên của hai biến (, ) và giá trị của một biến khác (, với giá trị 1 hoặc 2).</p>
+<p>Để giải quyết vấn đề này, ta cần truyền một vector vào đối số , nhưng lần này ta dùng sentinel đặc biệt ; đây không phải là tên của một biến mà là một giá trị đặc biệt cho để thực hiện một hành động khác. Cụ thể, nó sẽ ghi đè đối số thông thường và sử dụng thành phần đầu tiên của tên cột sau khi pivot làm tên biến trong bảng kết quả.</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="tidying-data.html#cb34-1" tabindex="-1"></a>household <span class="sc">|&gt;</span> </span>
+<span id="cb34-2"><a href="tidying-data.html#cb34-2" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb34-3"><a href="tidying-data.html#cb34-3" tabindex="-1"></a>    <span class="at">cols =</span> <span class="sc">!</span>family, </span>
+<span id="cb34-4"><a href="tidying-data.html#cb34-4" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="fu">c</span>(<span class="st">&quot;.value&quot;</span>, <span class="st">&quot;child&quot;</span>), </span>
+<span id="cb34-5"><a href="tidying-data.html#cb34-5" tabindex="-1"></a>    <span class="at">names_sep =</span> <span class="st">&quot;_&quot;</span>, </span>
+<span id="cb34-6"><a href="tidying-data.html#cb34-6" tabindex="-1"></a>    <span class="at">values_drop_na =</span> <span class="cn">TRUE</span></span>
+<span id="cb34-7"><a href="tidying-data.html#cb34-7" tabindex="-1"></a>  )</span></code></pre></div>
+<pre><code>## # A tibble: 9 × 4
+##   family child  dob        name 
+##    &lt;int&gt; &lt;chr&gt;  &lt;date&gt;     &lt;chr&gt;
+## 1      1 child1 1998-11-26 Susan
+## 2      1 child2 2000-01-29 Jose 
+## 3      2 child1 1996-06-22 Mark 
+## 4      3 child1 2002-07-11 Sam  
+## 5      3 child2 2004-04-05 Seth 
+## # ℹ 4 more rows</code></pre>
+</div>
+</div>
+<div id="chuẩn-hóa-theo-chiều-ngang" class="section level2 hasAnchor" number="4.6">
+<h2><span class="header-section-number">4.6</span> Chuẩn hóa theo chiều ngang<a href="tidying-data.html#chuẩn-hóa-theo-chiều-ngang" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Khi muốn mở rộng dữ liệu theo chiều ngang, giảm số dòng tăng số cột, đặc biệt trong trường hợp quan sát bị trải điều trên nhiều dong ta thực hiện chuẩn hóa theo chiều ngang bằng việc sử dụng hàm .</p>
+<p>Các tham số trong :</p>
+<ul>
+<li><p>: bảng dữ liệu cần pivot. : các cột định danh mỗi quan sát (nếu không chỉ định → mặc định lấy tất cả các cột trừ , ).</p></li>
+<li><p>: có mở rộng toàn bộ kết hợp có thể của không (giống ) → tạo thêm nhiều hàng.</p></li>
+<li><p>: cột (hoặc nhiều cột) dùng để tạo tên biến mới.</p></li>
+<li><p>: cột (hoặc nhiều cột) chứa giá trị để đổ vào các ô.</p></li>
+<li><p>: thêm tiền tố vào tên cột mới.</p></li>
+<li><p>: ký tự ghép nếu có nhiều cột.</p></li>
+<li><p>: thay cho và , cho phép tự thiết kế tên bằng cú pháp glue.</p></li>
+<li><p>: sắp xếp tên cột theo thứ tự (mặc định FALSE).</p></li>
+<li><p>: khi nhiều giá trị trong + nhiều , quy định thứ tự ghép cột (“fastest” hoặc “slowest”).</p></li>
+<li><p>: mở rộng tất cả giá trị có thể trong , kể cả giá trị không xuất hiện.</p></li>
+<li><p>: xử lý khi tên cột trùng (mặc định báo lỗi, có thể chọn “minimal”, “unique”…)</p></li>
+<li><p>: điền giá trị thay thế cho (ví dụ: 0).</p></li>
+<li><p>: hàm tổng hợp khi có nhiều giá trị rơi vào cùng một ô (ví dụ: , ).</p></li>
+<li><p>: hàm tổng hợp cho các cột không dùng trong , , .</p></li>
+</ul>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="tidying-data.html#cb36-1" tabindex="-1"></a>cms_patient_experience</span></code></pre></div>
+<pre><code>## # A tibble: 500 × 5
+##   org_pac_id org_nm                     measure_cd  measure_title            prf_rate
+##   &lt;chr&gt;      &lt;chr&gt;                      &lt;chr&gt;       &lt;chr&gt;                       &lt;dbl&gt;
+## 1 0446157747 USC CARE MEDICAL GROUP INC CAHPS_GRP_1 CAHPS for MIPS SSM: Get…       63
+## 2 0446157747 USC CARE MEDICAL GROUP INC CAHPS_GRP_2 CAHPS for MIPS SSM: How…       87
+## 3 0446157747 USC CARE MEDICAL GROUP INC CAHPS_GRP_3 CAHPS for MIPS SSM: Pat…       86
+## 4 0446157747 USC CARE MEDICAL GROUP INC CAHPS_GRP_5 CAHPS for MIPS SSM: Hea…       57
+## 5 0446157747 USC CARE MEDICAL GROUP INC CAHPS_GRP_8 CAHPS for MIPS SSM: Cou…       85
+## # ℹ 495 more rows</code></pre>
+<p>Đơn vị cốt lõi được nghiên cứu là tổ chức (), nhưng mỗi tổ chức lại trải rộng thành sáu hàng, với mỗi hàng tương ứng với một phép đo được thực hiện trong khảo sát tổ chức.</p>
+<p>Ta có thể xem toàn bộ tập hợp giá trị của và bằng cách sử dụng hàm .</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="tidying-data.html#cb38-1" tabindex="-1"></a>cms_patient_experience <span class="sc">|&gt;</span> </span>
+<span id="cb38-2"><a href="tidying-data.html#cb38-2" tabindex="-1"></a>  <span class="fu">distinct</span>(measure_cd, measure_title)</span></code></pre></div>
+<pre><code>## # A tibble: 6 × 2
+##   measure_cd  measure_title                                                         
+##   &lt;chr&gt;       &lt;chr&gt;                                                                 
+## 1 CAHPS_GRP_1 CAHPS for MIPS SSM: Getting Timely Care, Appointments, and Information
+## 2 CAHPS_GRP_2 CAHPS for MIPS SSM: How Well Providers Communicate                    
+## 3 CAHPS_GRP_3 CAHPS for MIPS SSM: Patient&#39;s Rating of Provider                      
+## 4 CAHPS_GRP_5 CAHPS for MIPS SSM: Health Promotion and Education                    
+## 5 CAHPS_GRP_8 CAHPS for MIPS SSM: Courteous and Helpful Office Staff                
+## # ℹ 1 more row</code></pre>
+<p>Cả hai cột này đều không phải là lựa chọn tốt để làm tên biến: thì không gợi ý rõ ý nghĩa của biến, còn lại là một câu dài có chứa khoảng trắng. Vì vậy, ta sẽ tạm dùng làm nguồn cho tên cột mới, nhưng trong một phân tích thực tế, bạn có thể muốn tự tạo ra những tên biến vừa ngắn gọn vừa có ý nghĩa hơn.</p>
+<p> có giao diện ngược lại với : thay vì chọn tên cột mới, ta cần chỉ định các cột hiện có để xác định giá trị () và tên cột ().</p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="tidying-data.html#cb40-1" tabindex="-1"></a>cms_patient_experience <span class="sc">|&gt;</span> </span>
+<span id="cb40-2"><a href="tidying-data.html#cb40-2" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(</span>
+<span id="cb40-3"><a href="tidying-data.html#cb40-3" tabindex="-1"></a>    <span class="at">names_from =</span> measure_cd,</span>
+<span id="cb40-4"><a href="tidying-data.html#cb40-4" tabindex="-1"></a>    <span class="at">values_from =</span> prf_rate</span>
+<span id="cb40-5"><a href="tidying-data.html#cb40-5" tabindex="-1"></a>  )</span></code></pre></div>
+<pre><code>## # A tibble: 500 × 9
+##   org_pac_id org_nm     measure_title CAHPS_GRP_1 CAHPS_GRP_2 CAHPS_GRP_3 CAHPS_GRP_5
+##   &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;               &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;
+## 1 0446157747 USC CARE … CAHPS for MI…          63          NA          NA          NA
+## 2 0446157747 USC CARE … CAHPS for MI…          NA          87          NA          NA
+## 3 0446157747 USC CARE … CAHPS for MI…          NA          NA          86          NA
+## 4 0446157747 USC CARE … CAHPS for MI…          NA          NA          NA          57
+## 5 0446157747 USC CARE … CAHPS for MI…          NA          NA          NA          NA
+## # ℹ 495 more rows
+## # ℹ 2 more variables: CAHPS_GRP_8 &lt;dbl&gt;, CAHPS_GRP_12 &lt;dbl&gt;</code></pre>
+<p>Kết quả đầu ra vẫn chưa đúng: có vẻ mỗi vẫn xuất hiện nhiều hàng. Lý do là ta còn phải cho biết cột (hoặc các cột) nào có giá trị nhận diện duy nhất từng hàng; trong trường hợp này chính là các biến bắt đầu bằng .</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="tidying-data.html#cb42-1" tabindex="-1"></a>cms_patient_experience <span class="sc">|&gt;</span> </span>
+<span id="cb42-2"><a href="tidying-data.html#cb42-2" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(</span>
+<span id="cb42-3"><a href="tidying-data.html#cb42-3" tabindex="-1"></a>    <span class="at">id_cols =</span> <span class="fu">starts_with</span>(<span class="st">&quot;org&quot;</span>),</span>
+<span id="cb42-4"><a href="tidying-data.html#cb42-4" tabindex="-1"></a>    <span class="at">names_from =</span> measure_cd,</span>
+<span id="cb42-5"><a href="tidying-data.html#cb42-5" tabindex="-1"></a>    <span class="at">values_from =</span> prf_rate</span>
+<span id="cb42-6"><a href="tidying-data.html#cb42-6" tabindex="-1"></a>  )</span></code></pre></div>
+<pre><code>## # A tibble: 95 × 8
+##   org_pac_id org_nm       CAHPS_GRP_1 CAHPS_GRP_2 CAHPS_GRP_3 CAHPS_GRP_5 CAHPS_GRP_8
+##   &lt;chr&gt;      &lt;chr&gt;              &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;
+## 1 0446157747 USC CARE ME…          63          87          86          57          85
+## 2 0446162697 ASSOCIATION…          59          85          83          63          88
+## 3 0547164295 BEAVER MEDI…          49          NA          75          44          73
+## 4 0749333730 CAPE PHYSIC…          67          84          85          65          82
+## 5 0840104360 ALLIANCE PH…          66          87          87          64          87
+## # ℹ 90 more rows
+## # ℹ 1 more variable: CAHPS_GRP_12 &lt;dbl&gt;</code></pre>
+<p><strong>Bài tập 3:</strong> Bộ dữ liệu này đến từ khảo sát của Pew Research Center về mối quan hệ giữa tôn giáo và mức thu nhập hộ</p>
+<p>Biến nào trong dataset hiện đang bị “ẩn” trong tên cột? Vì sao cách lưu dữ liệu này chưa phải là tidy data?</p>
+<p>Viết code R sử dụng ‘pivot_longer()’ để đưa dữ liệu về dạng tidy, với các cột: ‘religion’,
+‘income_group’, ‘percent’, ‘sample_size’</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="tidying-data.html#cb44-1" tabindex="-1"></a>religion <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&#39;https://raw.githubusercontent.com/chrosemo/data607_fall19_project2/master/pew.csv&#39;</span>, <span class="at">header=</span><span class="cn">TRUE</span>)</span>
+<span id="cb44-2"><a href="tidying-data.html#cb44-2" tabindex="-1"></a><span class="fu">glimpse</span>(religion)</span></code></pre></div>
+<pre><code>## Rows: 12
+## Columns: 6
+## $ Religious.tradition &lt;chr&gt; &quot;Buddhist&quot;, &quot;Catholic&quot;, &quot;Evangelical Protestant&quot;, &quot;Hind…
+## $ Less.than..30.000   &lt;chr&gt; &quot;36%&quot;, &quot;36%&quot;, &quot;35%&quot;, &quot;17%&quot;, &quot;53%&quot;, &quot;48%&quot;, &quot;16%&quot;, &quot;29%&quot;,…
+## $ X.30.000..49.999    &lt;chr&gt; &quot;18%&quot;, &quot;19%&quot;, &quot;22%&quot;, &quot;13%&quot;, &quot;22%&quot;, &quot;25%&quot;, &quot;15%&quot;, &quot;20%&quot;,…
+## $ X.50.000..99.999    &lt;chr&gt; &quot;32%&quot;, &quot;26%&quot;, &quot;28%&quot;, &quot;34%&quot;, &quot;17%&quot;, &quot;22%&quot;, &quot;24%&quot;, &quot;28%&quot;,…
+## $ X.100.000.or.more   &lt;chr&gt; &quot;13%&quot;, &quot;19%&quot;, &quot;14%&quot;, &quot;36%&quot;, &quot;8%&quot;, &quot;4%&quot;, &quot;44%&quot;, &quot;23%&quot;, &quot;…
+## $ Sample.Size         &lt;chr&gt; &quot;233&quot;, &quot;6,137&quot;, &quot;7,462&quot;, &quot;172&quot;, &quot;1,704&quot;, &quot;208&quot;, &quot;708&quot;, …</code></pre>
+<div id="cách-hoạt-động-1" class="section level3 hasAnchor" number="4.6.1">
+<h3><span class="header-section-number">4.6.1</span> Cách hoạt động<a href="tidying-data.html#cách-hoạt-động-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Để hiểu cách hoạt động, hãy bắt đầu với một bộ dữ liệu rất đơn giản. Lần này chúng ta có hai bệnh nhân với là và , có ba phép đo huyết áp trên bệnh nhân và hai phép đo trên bệnh nhân :</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="tidying-data.html#cb46-1" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
+<span id="cb46-2"><a href="tidying-data.html#cb46-2" tabindex="-1"></a>  <span class="sc">~</span>id, <span class="sc">~</span>measurement, <span class="sc">~</span>value,</span>
+<span id="cb46-3"><a href="tidying-data.html#cb46-3" tabindex="-1"></a>  <span class="st">&quot;A&quot;</span>,        <span class="st">&quot;bp1&quot;</span>,    <span class="dv">100</span>,</span>
+<span id="cb46-4"><a href="tidying-data.html#cb46-4" tabindex="-1"></a>  <span class="st">&quot;B&quot;</span>,        <span class="st">&quot;bp1&quot;</span>,    <span class="dv">140</span>,</span>
+<span id="cb46-5"><a href="tidying-data.html#cb46-5" tabindex="-1"></a>  <span class="st">&quot;B&quot;</span>,        <span class="st">&quot;bp2&quot;</span>,    <span class="dv">115</span>, </span>
+<span id="cb46-6"><a href="tidying-data.html#cb46-6" tabindex="-1"></a>  <span class="st">&quot;A&quot;</span>,        <span class="st">&quot;bp2&quot;</span>,    <span class="dv">120</span>,</span>
+<span id="cb46-7"><a href="tidying-data.html#cb46-7" tabindex="-1"></a>  <span class="st">&quot;A&quot;</span>,        <span class="st">&quot;bp3&quot;</span>,    <span class="dv">105</span></span>
+<span id="cb46-8"><a href="tidying-data.html#cb46-8" tabindex="-1"></a>)</span></code></pre></div>
+<p>Chúng ta sẽ lấy các giá trị từ cột và tên từ cột :</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="tidying-data.html#cb47-1" tabindex="-1"></a>df <span class="sc">|&gt;</span> </span>
+<span id="cb47-2"><a href="tidying-data.html#cb47-2" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(</span>
+<span id="cb47-3"><a href="tidying-data.html#cb47-3" tabindex="-1"></a>    <span class="at">names_from =</span> measurement,</span>
+<span id="cb47-4"><a href="tidying-data.html#cb47-4" tabindex="-1"></a>    <span class="at">values_from =</span> value</span>
+<span id="cb47-5"><a href="tidying-data.html#cb47-5" tabindex="-1"></a>  )</span></code></pre></div>
+<pre><code>## # A tibble: 2 × 4
+##   id      bp1   bp2   bp3
+##   &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1 A       100   120   105
+## 2 B       140   115    NA</code></pre>
+<p>Để bắt đầu quá trình, cần xác định trước những gì sẽ đi vào các hàng và cột. Tên các cột mới sẽ là các giá trị duy nhất của .</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="tidying-data.html#cb49-1" tabindex="-1"></a>df <span class="sc">|&gt;</span> </span>
+<span id="cb49-2"><a href="tidying-data.html#cb49-2" tabindex="-1"></a>  <span class="fu">distinct</span>(measurement) <span class="sc">|&gt;</span> </span>
+<span id="cb49-3"><a href="tidying-data.html#cb49-3" tabindex="-1"></a>  <span class="fu">pull</span>()</span></code></pre></div>
+<pre><code>## [1] &quot;bp1&quot; &quot;bp2&quot; &quot;bp3&quot;</code></pre>
+<p>Theo mặc định, các hàng trong kết quả được xác định bởi tất cả các biến mà không được sử dụng làm tên cột mới hoặc giá trị. Những biến này được gọi là . Ở đây chỉ có một cột, nhưng nói chung có thể có bao nhiêu cột cũng được.</p>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="tidying-data.html#cb51-1" tabindex="-1"></a>df <span class="sc">|&gt;</span> </span>
+<span id="cb51-2"><a href="tidying-data.html#cb51-2" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>measurement, <span class="sc">-</span>value) <span class="sc">|&gt;</span> </span>
+<span id="cb51-3"><a href="tidying-data.html#cb51-3" tabindex="-1"></a>  <span class="fu">distinct</span>()</span></code></pre></div>
+<pre><code>## # A tibble: 2 × 1
+##   id   
+##   &lt;chr&gt;
+## 1 A    
+## 2 B</code></pre>
+<p> sau đó kết hợp các kết quả này để tạo ra một trống:</p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="tidying-data.html#cb53-1" tabindex="-1"></a>df <span class="sc">|&gt;</span> </span>
+<span id="cb53-2"><a href="tidying-data.html#cb53-2" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>measurement, <span class="sc">-</span>value) <span class="sc">|&gt;</span> </span>
+<span id="cb53-3"><a href="tidying-data.html#cb53-3" tabindex="-1"></a>  <span class="fu">distinct</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb53-4"><a href="tidying-data.html#cb53-4" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">x =</span> <span class="cn">NA</span>, <span class="at">y =</span> <span class="cn">NA</span>, <span class="at">z =</span> <span class="cn">NA</span>)</span></code></pre></div>
+<pre><code>## # A tibble: 2 × 4
+##   id    x     y     z    
+##   &lt;chr&gt; &lt;lgl&gt; &lt;lgl&gt; &lt;lgl&gt;
+## 1 A     NA    NA    NA   
+## 2 B     NA    NA    NA</code></pre>
+<p>Sau đó, điền tất cả các giá trị còn thiếu dựa trên dữ liệu trong input. Trong trường hợp này, không phải mọi ô trong kết quả đều có giá trị tương ứng trong input, vì bệnh nhân không có phép đo huyết áp thứ ba, nên ô đó vẫn để trống. ta cũng có thể thắc mắc điều gì sẽ xảy ra nếu có nhiều hàng trong input tương ứng với một ô trong output. Ví dụ dưới đây có hai hàng tương ứng với và :</p>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="tidying-data.html#cb55-1" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
+<span id="cb55-2"><a href="tidying-data.html#cb55-2" tabindex="-1"></a>  <span class="sc">~</span>id, <span class="sc">~</span>measurement, <span class="sc">~</span>value,</span>
+<span id="cb55-3"><a href="tidying-data.html#cb55-3" tabindex="-1"></a>  <span class="st">&quot;A&quot;</span>,        <span class="st">&quot;bp1&quot;</span>,    <span class="dv">100</span>,</span>
+<span id="cb55-4"><a href="tidying-data.html#cb55-4" tabindex="-1"></a>  <span class="st">&quot;A&quot;</span>,        <span class="st">&quot;bp1&quot;</span>,    <span class="dv">102</span>,</span>
+<span id="cb55-5"><a href="tidying-data.html#cb55-5" tabindex="-1"></a>  <span class="st">&quot;A&quot;</span>,        <span class="st">&quot;bp2&quot;</span>,    <span class="dv">120</span>,</span>
+<span id="cb55-6"><a href="tidying-data.html#cb55-6" tabindex="-1"></a>  <span class="st">&quot;B&quot;</span>,        <span class="st">&quot;bp1&quot;</span>,    <span class="dv">140</span>, </span>
+<span id="cb55-7"><a href="tidying-data.html#cb55-7" tabindex="-1"></a>  <span class="st">&quot;B&quot;</span>,        <span class="st">&quot;bp2&quot;</span>,    <span class="dv">115</span></span>
+<span id="cb55-8"><a href="tidying-data.html#cb55-8" tabindex="-1"></a>)</span></code></pre></div>
+<p>Nếu chúng ta cố gắng thực hiện với dữ liệu này, kết quả sẽ chứa các cột kiểu danh sách ().</p>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="tidying-data.html#cb56-1" tabindex="-1"></a>df <span class="sc">|&gt;</span></span>
+<span id="cb56-2"><a href="tidying-data.html#cb56-2" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(</span>
+<span id="cb56-3"><a href="tidying-data.html#cb56-3" tabindex="-1"></a>    <span class="at">names_from =</span> measurement,</span>
+<span id="cb56-4"><a href="tidying-data.html#cb56-4" tabindex="-1"></a>    <span class="at">values_from =</span> value</span>
+<span id="cb56-5"><a href="tidying-data.html#cb56-5" tabindex="-1"></a>  )</span></code></pre></div>
+<pre><code>## Warning: Values from `value` are not uniquely identified; output will contain list-cols.
+## • Use `values_fn = list` to suppress this warning.
+## • Use `values_fn = {summary_fun}` to summarise duplicates.
+## • Use the following dplyr code to identify duplicates.
+##   {data} |&gt;
+##   dplyr::summarise(n = dplyr::n(), .by = c(id, measurement)) |&gt;
+##   dplyr::filter(n &gt; 1L)</code></pre>
+<pre><code>## # A tibble: 2 × 3
+##   id    bp1       bp2      
+##   &lt;chr&gt; &lt;list&gt;    &lt;list&gt;   
+## 1 A     &lt;dbl [2]&gt; &lt;dbl [1]&gt;
+## 2 B     &lt;dbl [1]&gt; &lt;dbl [1]&gt;</code></pre>
+<p>Vì chưa biết cách làm việc với loại dữ liệu này, ta làm theo gợi ý trong cảnh báo () để xác định vấn đề nằm ở đâu:</p>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="tidying-data.html#cb59-1" tabindex="-1"></a>df <span class="sc">|&gt;</span> </span>
+<span id="cb59-2"><a href="tidying-data.html#cb59-2" tabindex="-1"></a>  <span class="fu">group_by</span>(id, measurement) <span class="sc">|&gt;</span> </span>
+<span id="cb59-3"><a href="tidying-data.html#cb59-3" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">n =</span> <span class="fu">n</span>(), <span class="at">.groups =</span> <span class="st">&quot;drop&quot;</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb59-4"><a href="tidying-data.html#cb59-4" tabindex="-1"></a>  <span class="fu">filter</span>(n <span class="sc">&gt;</span> <span class="dv">1</span>)</span></code></pre></div>
+<pre><code>## # A tibble: 1 × 3
+##   id    measurement     n
+##   &lt;chr&gt; &lt;chr&gt;       &lt;int&gt;
+## 1 A     bp1             2</code></pre>
+<p>Sau đó, nhiệm vụ là xác định xem dữ liệu của mình đã bị lỗi ở đâu và hoặc là sửa các vấn đề gốc, hoặc là sử dụng kỹ năng nhóm () và tóm tắt () để đảm bảo rằng mỗi tổ hợp giá trị hàng và cột chỉ có một hàng duy nhất.</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="technical-details.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>
