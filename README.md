@@ -1,5 +1,14 @@
-This is the absolute minimum you need to start a [bookdown](https://bookdown.org/yihui/bookdown/) book. You can find the
-preview of this book at http://seankross.com/bookdown-start/
-
-All of the content of this repository is licensed 
-[CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+- Các file rmd down nên theo 01-ten.rmd
+- Mỗi file nên là một chương, chứa một # , không nên có code latex
+- Để các hình ảnh vào folder images
+- file _bookdown.yml chứa thông tin sẽ compile (rmd_files: thứ tự compile file rmd nếu không có compile theo tên)
+- index.html ở thư mục mẹ có thông tin sách sẽ hiện thị
+- book.bib: tài liệu tham khảo
+chạy bằng cách local: bookdown::render_book("index.Rmd")
+=> tạo ra file docs chứa sách => mở file docs/index.html 
+deploy trên github:
+ - public repo 
+ - setting => Pages => Build and deployment 
+ => Branch: main
+    Folder: docs
+    
